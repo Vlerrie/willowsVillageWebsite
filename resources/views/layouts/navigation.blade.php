@@ -14,9 +14,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">
                         @auth()
-                            Dashboard
+                            My Dashboard
                         @else
-                            Welcome
+                            The Security Village
                         @endif
                     </a>
                 </li>
@@ -35,22 +35,29 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="/#wilgersDiv">About Die Wilgers</a></li>
-                        `
                         {{-- <li><a class="dropdown-item" href="/#services">Services</a></li> --}}
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Security</a>
+                    <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Other
+                    </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="/security#village">Security Village</a></li>
-                        <li><a class="dropdown-item" href="/security#cameras">Cameras</a></li>
-                        <li><a class="dropdown-item" href="/security#enclosure">Enclosures</a></li>
+                        <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/#supportUs">Support Us</a>
-                </li>
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Security</a>--}}
+{{--                    <ul class="dropdown-menu dropdown-menu-end">--}}
+{{--                        <li><a class="dropdown-item" href="/security#village">Security Village</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="/security#cameras">Cameras</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="/security#enclosure">Enclosures</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link active" aria-current="page" href="/#supportUs">Support Us</a>--}}
+{{--                </li>--}}
             </ul>
 
             <ul class="navbar-nav mb-2 mb-md-0">

@@ -9,16 +9,51 @@
         </div>
     </div>
 
-    <div class="container-fluid col-12 px-4 py-5 bg-light mb-5 shadow">
-        @auth()
-            <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
+    @auth()
+        <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
+            <div class="row align-items-center justify-content-center g-lg-5 py-5 ps-lg-5">
                 {{--                <div class="col-lg-4 text-center text-lg-start">--}}
                 {{--                    <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}, check out the latest updates <i class="fa fa-arrow-right"></i></h1>--}}
                 {{--                </div>--}}
                 <div class="col-md-12 mx-auto">
                     @if(count($news) == 0)
-                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome back {{ Auth::user()->name }}, we don't have any news or updates to share at this time.</h1>
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Welcome back {{ Auth::user()->name }}, we don't
+                            have any news or updates to share at this time.</h1>
                     @endif
+
+                </div>
+            </div>
+        </div>
+    @endauth
+
+    <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
+        <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
+                <p class="col-lg-10 fs-4">Joining is free and gives every resident a voice.<br><br>
+                    By joining you will be added to a mailing list and will receive general updates that affects the
+                    area and its people.
+                    You will be able to unsubscribe from this feature should you not want to be included on these
+                    emails.<br><br>
+                    With the help and guidance of a consultant with conciderable experience in the field of
+                    community
+                    enclosures we as the willows security village task team are beyond excited to announce that it
+                    IS
+                    possible to start with closing down our community.
+
+                    We will need an absolute unified front and total support of the community to drive this project
+                    to completion. *NEED MORE INFO & DETAIL*
+
+                    {{-- AGM details will also be posted here and sent via email.
+                    In the future we also plan to use this platform to allow for an easy way of giving
+                    recommendations and voting on important matters. --}}
+                    <br><br>
+                    We hope to build a unified and strong community that looks out for our suburb and its peoples,
+                    help us by joining and being an active member!
+                </p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5 pe-lg-5">
+                @auth()
                     <ul class="list-group shadow">
                         @foreach($news as $n)
                             <li class="list-group-item border-start-0 border-end-0 py-3">
@@ -46,49 +81,23 @@
                             </li>
                         @endforeach
                     </ul>
-                </div>
-            </div>
-        @else
-            <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-                <div class="col-lg-7 text-center text-lg-start">
-                    <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
-                    <p class="col-lg-10 fs-4">Joining is free and gives every resident a voice.<br><br>
-                        By joining you will be added to a mailing list and will receive general updates that affects the
-                        area and its people.
-                        You will be able to unsubscribe from this feature should you not want to be included on these
-                        emails.<br><br>
-                        With the help and guidance of a consultant with conciderable experience in the field of
-                        community
-                        enclosures we as the willows security village task team are beyond excited to announce that it
-                        IS
-                        possible to start with closing down our community.
-
-                        We will need an absolute unified front and total support of the community to drive this project
-                        to completion. *NEED MORE INFO & DETAIL*
-
-                        {{-- AGM details will also be posted here and sent via email.
-                        In the future we also plan to use this platform to allow for an easy way of giving
-                        recommendations and voting on important matters. --}}
-                        <br><br>
-                        We hope to build a unified and strong community that looks out for our suburb and its peoples,
-                        help us by joining and being an active member!
-                    </p>
-                </div>
-                <div class="col-md-10 mx-auto col-lg-5 pe-lg-5">
+                @elseauth()
                     @include('auth.registerForm')
-                </div>
+                @endauth
             </div>
-        @endauth
+        </div>
+    </div>
     </div>
     <div style="height: 40vh"></div>
-    <div class="container-fluid col-12 px-4 py-5 bg-light mt-5">
+    <div class="container-fluid col-12 px-4 py-5 bg-light mt-5" id="wilgersDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 mb-3" id="wilgersDiv">Die Wilgers</h1>
+                <h1 class="display-4 fw-bold lh-1 mb-3">Die Wilgers</h1>
                 <p class="col-lg-10 fs-4"> Die Wilgers is one of the eastern suburb of Pretoria, Gauteng.
                     It can be described as a safe residential area, rich in trees and with beautiful gardens and
                     sidewalks.
-                    The presence of an Afrikaans and English high school in the area, and two primary schools nearby, as
+                    The presence of an Afrikaans and English high school in the area, and two primary schools
+                    nearby, as
                     well as the German school in close proximity, makes Die Wilgers a sought after suburb.
                     The residents of Die Wilgers strive to maintain the special character of the area through the
                     actions of a Residents Association represented by an executive committee which is democratically
@@ -107,10 +116,10 @@
     {{-- <div class="container-fluid px-4 py-3 bg-secondary shadow" id="services"> --}}
     {{-- @include('partials.services') --}}
     {{-- </div> --}}
-    <div style="height: 40vh"></div>
+    {{--    <div style="height: 40vh"></div>--}}
     {{--    @auth() --}}
-    <div class="container-fluid px-4 py-5 bg-light mt-5" id="supportUs">
-        @include('partials.support')
-    </div>
+    {{--    <div class="container-fluid px-4 py-5 bg-light mt-5" id="supportUs">--}}
+    {{--        @include('partials.support')--}}
+    {{--    </div>--}}
     {{--    @endauth --}}
 @stop
