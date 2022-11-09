@@ -188,7 +188,7 @@
     </div>
 
     <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIdlm6ucsmKeCYhXyfLGtg0R2PaA8-Nq4&libraries=places&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_CLOUD_API_KEY')}}&libraries=places&callback=initMap">
     </script>
 
     <script>
