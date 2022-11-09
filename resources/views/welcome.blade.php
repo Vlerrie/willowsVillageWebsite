@@ -81,7 +81,7 @@
                             </li>
                         @endforeach
                     </ul>
-                @elseauth()
+                @else
                     @include('auth.registerForm')
                 @endauth
             </div>
