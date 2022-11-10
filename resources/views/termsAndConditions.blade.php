@@ -7,7 +7,7 @@
             <div class="col-md-10 p-5 bg-light">
                 <h4>Terms and Conditions</h4>
                 <p>Welcome to Willows Security Village!</p>
-                <p>These terms and conditions outline the rules and regulations for the use of Willows Security Village Association&apos;s Website, located at https://WSV Website.co.za/.</p>
+                <p>These terms and conditions outline the rules and regulations for the use of Willows Security Village Association&apos;s Website, located at https://willowvillage.co.za/.</p>
                 <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use Wilgers Security Village Website if you do not agree to take all of the terms and conditions stated on this page.</p>
                 <h4>Cookies:</h4>
                 <p>The website uses cookies to help personalize your online experience. By accessing Wilgers Security Village Website, you agreed to use the required cookies.</p>

