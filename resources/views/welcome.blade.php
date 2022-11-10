@@ -2,15 +2,8 @@
 
 @section('content')
 
-    <div class="container-fluid m-0 py-4 default-gradient" id="welcome">
-        <div class="row justify-content-center py-4">
-            <div class="col-md-4 bg-dark">
-            </div>
-        </div>
-    </div>
-
     @auth()
-        <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
+        <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow" id="newsDiv">
             <div class="row align-items-center g-lg-5 py-5 px-lg-5">
                 <div class="col-lg-12">
                     {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
@@ -24,9 +17,10 @@
                 </div>
             </div>
         </div>
+        <div style="height: 40vh"></div>
     @endauth
 
-    <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
+    <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow" id="willowsSecurityDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
             <div class="col-lg-6 text-center text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
@@ -50,8 +44,7 @@
             </div>
             <div class="col-md-10 mx-auto col-lg-6 pe-lg-1 align-items-top">
                 @auth()
-
-
+                    <h1>## Image of closure gate locations</h1>
                 @else
                     @include('auth.registerForm')
                 @endauth
@@ -77,10 +70,7 @@
                 </p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5 pe-lg-5" id="wilgersMap">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10163.32787900159!2d28.312517724046224!3d-25.76134554777729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955e3738401f33%3A0xcf3d42415aa4c6af!2sDie%20Wilgers%2C%20Pretoria%2C%200184!5e0!3m2!1sen!2sza!4v1666022853065!5m2!1sen!2sza"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14373.168142935181!2d28.304539589442278!3d-25.760915863014436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955e3738401f33%3A0xcf3d42415aa4c6af!2sDie%20Wilgers%2C%20Pretoria%2C%200184!5e0!3m2!1sen!2sza!4v1668093623428!5m2!1sen!2sza" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>

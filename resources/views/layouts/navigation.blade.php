@@ -10,52 +10,36 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">
-                        @auth()
-                            My Dashboard
-                        @else
-                            The Security Village
-                        @endif
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="wsvNav" href="" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Willows Security Village
                     </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>
+                        <li><a class="dropdown-item" href="/#willowsSecurityDiv">About Willows Security Village</a></li>
+                        <li><a class="dropdown-item" href="/#wilgersDiv">About Die Wilgers Area</a></li>
+                    </ul>
                 </li>
                 @auth()
                     @if(Auth::user()->admin)
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/admin/dashboard">
+                            <a class="nav-link" id="adminNav" aria-current="page" href="/admin/dashboard">
                                 Admin
                             </a>
                         </li>
                     @endif
                 @endif
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown" aria-expanded="false">
-                        Die Wilgers
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                        <li><a class="dropdown-item" href="/#wilgersDiv">About Die Wilgers</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="otherNav" href="" data-bs-toggle="dropdown"
+                       aria-expanded="false">
                         Other
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>
-{{--                <li class="nav-item dropdown">--}}
-{{--                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Security</a>--}}
-{{--                    <ul class="dropdown-menu dropdown-menu-end">--}}
-{{--                        <li><a class="dropdown-item" href="/security#village">Security Village</a></li>--}}
-{{--                        <li><a class="dropdown-item" href="/security#cameras">Cameras</a></li>--}}
-{{--                        <li><a class="dropdown-item" href="/security#enclosure">Enclosures</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link active" aria-current="page" href="/#supportUs">Support Us</a>--}}
-{{--                </li>--}}
             </ul>
 
             <ul class="navbar-nav mb-2 mb-md-0">
@@ -89,3 +73,17 @@
         </div>
     </div>
 </nav>
+<script>
+    let pagePath = window.location.pathname;
+    switch (pagePath) {
+        case '/':
+            document.getElementById('wsvNav').classList.add('active');
+            break;
+        case '/admin/dashboard':
+            document.getElementById('adminNav').classList.add('active');
+            break;
+        default:
+            console.log(pagePath);
+            break;
+    }
+</script>
