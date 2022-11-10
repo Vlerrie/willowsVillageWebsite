@@ -11,17 +11,17 @@
 
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
-            <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-                    <div class="col-lg-12">
-{{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
-                        @if(count($news) == 0)
-                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
-                        @else
-                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest Updates:</h1>
-                            @include('partials.newsItems')
-                        @endif
+            <div class="row align-items-center g-lg-5 py-5 py-lg-5">
+                <div class="col-lg-12">
+                    {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
+                    @if(count($news) == 0)
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
+                    @else
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest Updates:</h1>
+                        @include('partials.newsItems')
+                    @endif
 
-                    </div>
+                </div>
             </div>
         </div>
     @endauth
