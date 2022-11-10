@@ -1,12 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid m-0 py-4 default-gradient" id="welcome">
-        <div class="row justify-content-center py-4">
-            <div class="col-md-4 bg-dark">
-            </div>
-        </div>
-    </div>
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow" id="newsDiv">
             <div class="row align-items-center g-lg-5 py-5 px-lg-5">
