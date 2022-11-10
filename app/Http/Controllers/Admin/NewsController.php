@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\NewsRequest;
 use App\Models\News;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-    public function create(Request $request)
+    public function create(NewsRequest $request)
     {
         $publish = null;
         if (isset($request->publish)){

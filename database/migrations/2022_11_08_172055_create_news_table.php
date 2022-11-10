@@ -19,6 +19,8 @@ return new class extends Migration
             $table->text('body');
             $table->timestamp('published', 0)->nullable();
             $table->timestamps();
+
+            $table->index(['published']);
         });
     }
 

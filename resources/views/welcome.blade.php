@@ -11,26 +11,19 @@
 
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
-            <div class="row align-items-center justify-content-center g-lg-5 py-5 ps-lg-5">
-                {{--                <div class="col-lg-4 text-center text-lg-start">--}}
-                {{--                    <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}, check out the latest updates <i class="fa fa-arrow-right"></i></h1>--}}
-                {{--                </div>--}}
-                <div class="col-md-12 mx-auto">
-                    @if(count($news) == 0)
-                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Welcome back {{ Auth::user()->name }}, we don't
-                            have any news or updates to share at this time.</h1>
-                    @endif
-
-                </div>
+            <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>
+                    </div>
             </div>
         </div>
     @endauth
 
     <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-            <div class="col-lg-7 text-center text-lg-start">
+            <div class="col-lg-6 text-center text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
-                <p class="col-lg-10 fs-4">Joining is free and gives every resident a voice.<br><br>
+                <p class="col-lg-11 fs-4">Joining is free and gives every resident a voice.<br><br>
                     By joining you will be added to a mailing list and will receive general updates that affects the
                     area and its people.
                     You will be able to unsubscribe from this feature should you not want to be included on these
@@ -52,35 +45,14 @@
                     help us by joining and being an active member!
                 </p>
             </div>
-            <div class="col-md-10 mx-auto col-lg-5 pe-lg-5">
+            <div class="col-md-10 mx-auto col-lg-6 pe-lg-1 align-items-top">
                 @auth()
-                    <ul class="list-group shadow">
-                        @foreach($news as $n)
-                            <li class="list-group-item border-start-0 border-end-0 py-3">
-                                <div class="row">
-                                    <div class="col-3 border-end">
-                                        <h2 class="h2">
-                                            {{$n->subject}}
-                                        </h2>
-                                        <small>{{$n->created_at}}</small>
-                                    </div>
-                                    <div class="col-9 ps-3">
-                                        @auth()
-                                            @if(Auth::user()->admin)
-                                                <button class="btn btn-outline-danger border-0 float-end"
-                                                        style="position: relative; right: 0px">
-                                                    <i class="fa fa-trash-can"></i>
-                                                </button>
-                                            @endif
-                                        @endif
+                    @if(count($news) == 0)
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
+                    @endif
 
-                                        {!! $n->body !!}
-                                    </div>
-                                </div>
+                    @include('partials.newsItems')
 
-                            </li>
-                        @endforeach
-                    </ul>
                 @else
                     @include('auth.registerForm')
                 @endauth

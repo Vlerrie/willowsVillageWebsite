@@ -33,30 +33,11 @@
                     {{-- Create update/news item --}}
                     <div class="tab-pane fade" id="v-pills-news" role="tabpanel"
                          aria-labelledby="v-pills-news-tab" tabindex="0">
-                        <form action="/admin/news/create" method="post">
-                            @csrf
-                            <div class="form-floating mb-3">
-                                <input type="text" name="title" class="form-control" id="title">
-                                <label for="title">Title</label>
-                            </div>
-                            <textarea id="post" name="body" class="form-control"></textarea>
+                        @include('admin.newsForm')
 
-                            <div class="row my-3">
-                                <div class="col-md-3">
-                                    <div class="form-check form-switch my-3">
-                                        <input class="form-check-input" name="publish" type="checkbox" role="switch"
-                                               id="publish" checked>
-                                        <label class="form-check-label" for="publish">Publish</label>
-                                    </div>
-                                    <button class="btn w-100 btn-outline-success">Save</button>
-                                </div>
-                                <div class="col-md-3">
-                                </div>
-                            </div>
-                        </form>
                     </div>
                     {{-- Password Change Form --}}
-                    <div class="tab-pane fade" id="v-pills-accounts" role="tabpanel"
+                    <div class="tab-pane fade overflow-auto" id="v-pills-accounts" role="tabpanel"
                          aria-labelledby="v-pills-accounts-tab" tabindex="0">
                         <table class="table table-bordered" id="accountsTable">
                             <thead>

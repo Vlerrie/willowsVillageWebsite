@@ -33,17 +33,15 @@
                     <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown" aria-expanded="false">
                         Die Wilgers
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                         <li><a class="dropdown-item" href="/#wilgersDiv">About Die Wilgers</a></li>
-                        {{-- <li><a class="dropdown-item" href="/#services">Services</a></li> --}}
-                        <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown" aria-expanded="false">
                         Other
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>
@@ -65,7 +63,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                            aria-expanded="false">{{Auth::user()->name}}</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                             <li><a class="dropdown-item" href="/account">My Account</a></li>
                             {{--                            <li><a class="dropdown-item" href="#">Another action</a></li>--}}
                             <li>

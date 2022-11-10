@@ -36,6 +36,11 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->index(['cell']);
+            $table->index(['email']);
+            $table->index(['email', 'comm_newsletter']);
+            $table->index(['email', 'comm_events']);
         });
     }
 
