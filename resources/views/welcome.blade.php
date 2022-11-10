@@ -17,7 +17,7 @@
                     @if(count($news) == 0)
                         <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
                     @else
-                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest Updates:</h1>
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest News & Updates:</h1>
                         @include('partials.newsItems')
                     @endif
 
