@@ -98,7 +98,7 @@
 
     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css"/>
 
-    <script type="text/javascript" src="/JQuery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/jQuery/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="/DataTables/datatables.min.js"></script>
 
     <script>
