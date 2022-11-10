@@ -83,6 +83,7 @@
             document.getElementById('adminNav').classList.add('active');
             break;
         default:
+            document.getElementById('otherNav').classList.add('active');
             console.log(pagePath);
             break;
     }
