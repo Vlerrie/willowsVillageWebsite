@@ -21,7 +21,7 @@
 
     <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow" id="willowsSecurityDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-            <div class="col-lg-6 text-center text-lg-start">
+            <div class="col-lg-7 text-center text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
                 <p class="col-lg-11 fs-4">
                     Joining is free and gives every resident a voice.
@@ -41,7 +41,7 @@
                     site and being an active member of our community
                 </p>
             </div>
-            <div class="col-md-10 mx-auto col-lg-6 pe-lg-5 align-items-top">
+            <div class="col-md-10 mx-auto col-lg-5 px-lg-5 align-items-top">
                 @auth()
                     <h1>## Image of closure gate locations</h1>
                 @else

@@ -1,6 +1,6 @@
 <form class="p-4 p-md-5 border rounded-3 bg-light shadow" onsubmit="return validateRegister()" method="post" action="/register">
-    <div class="row justify-content-center mb-5">
-        <div class="col-9">
+    <div class="row justify-content-center mb-4">
+        <div class="col-8">
             @include('layouts.logo')
         </div>
     </div>
