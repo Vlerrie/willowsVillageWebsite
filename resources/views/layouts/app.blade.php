@@ -13,6 +13,14 @@
     <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
     {{--    <link href="/fontawesome/css/brands.css" rel="stylesheet">--}}
     <link href="/fontawesome/css/solid.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNQJ469P10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JNQJ469P10');
+    </script>
 </head>
 <body>
 @include('layouts.navigation')
