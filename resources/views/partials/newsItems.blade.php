@@ -1,6 +1,6 @@
 <ul class="list-group shadow">
     @foreach($news as $n)
-        <li class="list-group-item border-start-0 border-end-0 py-3">
+        <li class="list-group-item border-start-0 border-end-0 p-4">
             <div class="row">
                 <div class="col-md-3 border-end">
                     <h2 class="h2 mb-0">
