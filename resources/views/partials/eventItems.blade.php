@@ -5,7 +5,8 @@
             <h3 class="h3 mb-0">
                 {{$e->title}}
             </h3>
-            {{$e->getEventTime()}}
+            <p class="m-0">{{$e->getEventTime()}}</p>
+            <small>{{$e->address}}</small>
         </li>
     @endforeach
 </ul>

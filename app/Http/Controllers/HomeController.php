@@ -14,20 +14,22 @@ class HomeController extends Controller
 {
     public function dashboard()
     {
-        $user = User::find(1);
-        $user->admin = 1;
-        $user->save();
+//        $user = User::find(1);
+//        $user->admin = 1;
+//        $user->save();
 
         $news = [];
         $events = [];
         if (Auth::check()) {
             $news = News::whereNotNull('published')
                 ->where('published', '<', Carbon::now('Africa/Johannesburg'))
+                ->orderBy('published', 'desc')
                 ->take(10)
                 ->get();
 
             $fromDate = Carbon::now('Africa/Johannesburg')->subHour();
             $events = Event::where('date', '>', $fromDate)
+                ->orderBy('date', 'asc')
                 ->get();
         }
 
