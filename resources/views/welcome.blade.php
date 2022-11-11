@@ -32,18 +32,18 @@
                 <div class="row g-lg-5 py-5 px-lg-5">
                     <div class="col-md-4">
                         @if(count($events) == 0)
-                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No upcoming Events</h1>
+                            <h1 class="h1 fw-bold lh-1 mb-3">No Events</h1>
                         @else
-                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Events:</h1>
+                            <h1 class="h1 fw-bold lh-1 mb-3">Upcoming Events:</h1>
                             @include('partials.eventItems')
                         @endif
                     </div>
                     <div class="col-md-8">
                         {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
                         @if(count($news) == 0)
-                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
+                            <h1 class="h1 fw-bold lh-1 mb-3">No News</h1>
                         @else
-                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest News & Updates:</h1>
+                            <h1 class="h1 fw-bold lh-1 mb-3">Latest News</h1>
                             @include('partials.newsItems')
                         @endif
 
