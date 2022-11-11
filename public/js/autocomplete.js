@@ -63,7 +63,7 @@ function initMapFull() {
         componentRestrictions: {country: "za"},
         fields: ["address_components", "geometry", "icon", "name"],
         strictBounds: true,
-        types: ["address"],
+        // types: ["address"],
     };
 
     const autocomplete = new google.maps.places.Autocomplete(input, options);
