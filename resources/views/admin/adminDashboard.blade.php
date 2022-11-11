@@ -12,6 +12,10 @@
                                 data-bs-target="#v-pills-news" type="button" role="tab"
                                 aria-controls="v-pills-news" aria-selected="true">News & Updates
                         </button>
+                        <button class="nav-link w-100" id="v-pills-events-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-events" type="button" role="tab"
+                                aria-controls="v-pills-events" aria-selected="true">Events
+                        </button>
                         <button class="nav-link w-100" id="v-pills-accounts-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-accounts" type="button" role="tab"
                                 aria-controls="v-pills-accounts" aria-selected="false">Accounts
@@ -34,7 +38,11 @@
                     <div class="tab-pane fade" id="v-pills-news" role="tabpanel"
                          aria-labelledby="v-pills-news-tab" tabindex="0">
                         @include('admin.newsForm')
-
+                    </div>
+                    {{-- Create update event item --}}
+                    <div class="tab-pane fade" id="v-pills-events" role="tabpanel"
+                         aria-labelledby="v-pills-events-tab" tabindex="0">
+                        @include('admin.eventForm')
                     </div>
                     {{-- Password Change Form --}}
                     <div class="tab-pane fade overflow-auto" id="v-pills-accounts" role="tabpanel"

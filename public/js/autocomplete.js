@@ -46,6 +46,49 @@ function initMap() {
     });
 }
 
+function initMapFull() {
+    input = document.getElementById('floatingFieldThing');
+    //north = -22.073816
+    //east = 33.143327
+    //south = -34.903713
+    //west =  16.409193
+    const defaultBounds = {
+        north: -22.073816,
+        south: -34.903713,
+        east: 33.143327,
+        west: 16.409193,
+    };
+    const options = {
+        bounds: defaultBounds,
+        componentRestrictions: {country: "za"},
+        fields: ["address_components", "geometry", "icon", "name"],
+        strictBounds: true,
+        types: ["address"],
+    };
+
+    const autocomplete = new google.maps.places.Autocomplete(input, options);
+
+    autocomplete.setBounds({east: 180, west: -180, north: 90, south: -90});
+
+    autocomplete.addListener("place_changed", () => {
+
+        const place = autocomplete.getPlace();
+
+        if (!place.geometry || !place.geometry.location) {
+            window.alert("No details available for input: '" + place.name + "'");
+        } else {
+            place.address_components.forEach(function (item) {
+                item.types.forEach(function (subItem) {
+                    if (typeof window[subItem] !== 'undefined') {
+                        window[subItem].value = item.long_name
+                    }
+                });
+            });
+            registerButton.removeAttribute('disabled');
+        }
+    });
+}
+
 function clearAddressFields() {
     street_number.value = route.value = sublocality.value = locality.value = postal_code.value = ''
 }

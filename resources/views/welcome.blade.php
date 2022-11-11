@@ -3,8 +3,16 @@
 @section('content')
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 mb-5 shadow" id="newsDiv">
-            <div class="row align-items-center g-lg-5 py-5 px-lg-5">
-                <div class="col-lg-12">
+            <div class="row g-lg-5 py-5 px-lg-5">
+                <div class="col-md-4">
+                    @if(count($events) == 0)
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No upcoming Events</h1>
+                    @else
+                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Events:</h1>
+                        @include('partials.eventItems')
+                    @endif
+                </div>
+                <div class="col-md-8">
                     {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
                     @if(count($news) == 0)
                         <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>

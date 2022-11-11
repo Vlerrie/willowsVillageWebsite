@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -43,6 +44,20 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
+        $this->renderable(function (HttpException $e, $request) {
+            if ($e->getStatusCode() == 419) {
+                session()->flash(
+                    'flash_message',
+                    [
+                        'heading' => 'Error',
+                        'message' => 'The page has expired, please try again.',
+                        'type' => 'bg-warning'
+                    ]
+                );
+                return redirect()->back();
+            }
+        });
+
         $this->reportable(function (Throwable $e) {
             //
         });
