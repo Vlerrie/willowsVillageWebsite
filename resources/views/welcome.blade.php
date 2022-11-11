@@ -3,26 +3,56 @@
 @section('content')
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 mb-5 shadow" id="newsDiv">
-            <div class="row g-lg-5 py-5 px-lg-5">
-                <div class="col-md-4">
-                    @if(count($events) == 0)
-                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No upcoming Events</h1>
-                    @else
-                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Events:</h1>
-                        @include('partials.eventItems')
-                    @endif
+            @if(!Auth::user()->email_verified_at && isset(Auth::user()->email))
+                <div class="row justify-content-center g-lg-5 py-5 px-lg-5">
+                    <div class="col-md-4 bg-light p-5 rounded-3">
+                        <h3 class="h3 text-center">
+                            Please Verify Your Email
+                        </h3>
+                        <h4 class="h6 text-center">
+                            Or Resend The Email By Clicking The Button Below
+                        </h4>
+                        <button class="btn btn-lg w-100 btn-outline-secondary mt-3" onclick="window.location.href='/email/verification-notification'">
+                            Resend Email Verification
+                        </button><br>
+                    </div>
                 </div>
-                <div class="col-md-8">
-                    {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
-                    @if(count($news) == 0)
-                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
-                    @else
-                        <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest News & Updates:</h1>
-                        @include('partials.newsItems')
-                    @endif
 
+                <li class="list-group-item border-start-0 border-end-0 p-4">
+
+                    <div class="text-end">
+
+                    </div>
+
+
+                    <small></small>
+                </li>
+
+            @else
+                <div class="row g-lg-5 py-5 px-lg-5">
+                    <div class="col-md-4">
+                        @if(count($events) == 0)
+                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No upcoming Events</h1>
+                        @else
+                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Events:</h1>
+                            @include('partials.eventItems')
+                        @endif
+                    </div>
+                    <div class="col-md-8">
+                        {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
+                        @if(count($news) == 0)
+                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">No news or updates at this time</h1>
+                        @else
+                            <h1 class="display-4 px-5 fw-bold lh-1 mb-3">Latest News & Updates:</h1>
+                            @include('partials.newsItems')
+                        @endif
+
+                    </div>
                 </div>
-            </div>
+            @endif
+
+
+
         </div>
 {{--        <div style="height: 40vh"></div>--}}
     @endauth

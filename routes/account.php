@@ -13,7 +13,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/email/verification-notification', function () {
        Auth::user()->sendEmailVerificationNotification();
-
+        session()->flash(
+            'flash_message',
+            [
+                'heading' => 'Email Sent',
+                'message' => 'We have sent you a new verification email.',
+                'type' => 'bg-success'
+            ]
+        );
         return back()->with('message', 'Verification link sent!');
     })->middleware(['throttle:6,1'])->name('verification.send');
 });
