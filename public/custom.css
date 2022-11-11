@@ -10,3 +10,11 @@ body {
     background: -webkit-linear-gradient(to right, #2A7350, #1A943B, #2B9D50);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2A7350, #1A943B, #2B9D50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+li.event:hover {
+    cursor: pointer;
+    background-color: #2B9D50;
+    color: white;
+    transition: background-color 200ms;
+    transition-timing-function: ease-in;
+}
