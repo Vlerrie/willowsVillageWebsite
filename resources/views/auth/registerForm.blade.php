@@ -80,7 +80,7 @@
                                         Your Street Address
                                     </label>
                                 </div>
-                                <button class="w-100 btn btn-lg btn-success" id="registerButton" type="submit">
+                                <button class="w-100 btn btn-lg btn-success" id="registerButton" type="submit" onclick="setTimeout(() => this.setAttribute('disabled', true), 20);" >
                                     Sign up
                                     <i class="fa-solid fa-clipboard-list ms-2"></i>
                                 </button>

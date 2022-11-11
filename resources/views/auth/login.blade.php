@@ -33,7 +33,7 @@
                                 Password
                             </label>
                         </div>
-                        <button class="w-100 btn btn-lg btn-success" type="submit">
+                        <button class="w-100 btn btn-lg btn-success" type="submit" onclick="setTimeout(() => this.setAttribute('disabled', true), 20);">
                             Sign In
                             <i class="fa-solid fa-arrow-right ms-2"></i>
                         </button>
