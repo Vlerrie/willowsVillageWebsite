@@ -29,7 +29,7 @@
                 </li>
 
             @else
-                <div class="row g-lg-5 py-5 px-lg-5">
+                <div class="row g-lg-5 py-5 px-lg-5 overflow-auto" style="max-height: 700px">
                     <div class="col-md-4">
                         @if(count($events) == 0)
                             <h1 class="h1 fw-bold lh-1 mb-3">No Events</h1>
