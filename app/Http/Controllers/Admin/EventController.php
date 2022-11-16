@@ -9,7 +9,6 @@ use App\Models\Event;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
-use Symfony\Component\Mime\Email;
 
 class EventController extends Controller
 {
@@ -27,13 +26,6 @@ class EventController extends Controller
         foreach ($mailList as $recipient) {
             Mail::to($recipient->email)->send(new EventCreated($event, $recipient));
         }
-
-//        Mail::send('emails.eventCreated', [
-//            'event' => $event
-//        ], function ($mail) use ($mailList, $event) {
-//            $mail->to($mailList);
-//            $mail->subject('Willows Security Village Event: '.$event->title);
-//        });
 
         session()->flash(
             'flash_message',
