@@ -22,7 +22,7 @@ class EventController extends Controller
             'date' => $dateTime,
         ]);
 
-        $mailList = User::where('comm_events', true)->get(['id', 'email']);
+        $mailList = User::where('comm_events', true)->whereNotNull('email')->get(['id', 'email']);
         foreach ($mailList as $recipient) {
             Mail::to($recipient->email)->send(new EventCreated($event, $recipient));
         }

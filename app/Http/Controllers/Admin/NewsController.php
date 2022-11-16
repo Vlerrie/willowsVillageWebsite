@@ -26,7 +26,7 @@ class NewsController extends Controller
             'published' => $publish
         ]);
 
-        $mailList = User::where('comm_newsletter', true)->get(['id', 'email']);
+        $mailList = User::where('comm_newsletter', true)->whereNotNull('email')->get(['id', 'email']);
         foreach ($mailList as $recipient) {
             Mail::to($recipient->email)->send(new UpdateCreated($news, $recipient));
         }
