@@ -1,9 +1,10 @@
 body {
-    background-image: url("/img/backgrounds/father-son-walking.jpg");
-    background-repeat: no-repeat;
-    background-position: 12% 0;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #01843A;
+    /*background-image: url("/img/backgrounds/father-son-walking.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 12% 0;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
 }
 
 .default-gradient{
@@ -18,4 +19,17 @@ li.event:hover {
     color: white;
     transition: background-color 200ms;
     transition-timing-function: ease-in;
+}
+
+
+.bg-wvbrown{
+    background-color: #6C3F2D;
+}
+
+.bg-wvgreen{
+    background-color: #01843A;
+}
+
+.navbar-additions{
+    border-bottom: solid 3px #037F37;
 }

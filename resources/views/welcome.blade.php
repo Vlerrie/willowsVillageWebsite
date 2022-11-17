@@ -2,7 +2,7 @@
 
 @section('content')
     @auth()
-        <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 mb-5 shadow" id="newsDiv">
+        <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow" id="newsDiv">
             @if(!Auth::user()->email_verified_at && isset(Auth::user()->email))
                 <div class="row justify-content-center g-lg-5 py-5 px-lg-5">
                     <div class="col-md-4 bg-light p-5 rounded-3">
@@ -18,17 +18,6 @@
                         </button><br>
                     </div>
                 </div>
-
-                <li class="list-group-item border-start-0 border-end-0 p-4">
-
-                    <div class="text-end">
-
-                    </div>
-
-
-                    <small></small>
-                </li>
-
             @else
                 <div class="row g-lg-5 py-5 px-lg-5 overflow-auto" style="max-height: 700px">
                     <div class="col-md-4">
@@ -51,14 +40,10 @@
                     </div>
                 </div>
             @endif
-
-
-
         </div>
-{{--        <div style="height: 40vh"></div>--}}
     @endauth
 
-    <div class="container-fluid col-12 px-4 py-3 bg-light mb-5 shadow" id="willowsSecurityDiv">
+    <div class="container-fluid col-12 px-4 py-3 bg-light shadow" id="willowsSecurityDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
             <div class="col-lg-7 text-center text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
@@ -90,17 +75,38 @@
         </div>
     </div>
     </div>
-    <div style="height: 40vh"></div>
-    <div class="container-fluid col-12 px-4 py-5 bg-light mt-5" id="closureDiv">
+    <div class="container-fluid col-12 px-4 py-3 bg-wvgreen shadow" id="benefitsDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-            <div class="col-lg-7 text-center text-lg-start">
+            <div class="col-lg-5 text-center text-lg-start">
+                <h1 class="display-4 fw-bold lh-1 mb-3 text-white">The Benefits</h1>
+            </div>
+            <div class="col-md-10 col-lg-7 pe-lg-5 mx-auto" id="">
+                <ul class="list-group col-10">
+                    <li class="list-group-item">
+                        <h3 class="h3 text-center">
+                            Property Value Increase
+                        </h3>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="h3 text-center">
+                            Security For Your Family
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid col-12 px-4 py-5 bg-light" style="min-height: 75vh" id="closureDiv">
+        <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
+            <div class="col-lg-5 text-center text-lg-start">
+                <h1>## Image of closure gate locations</h1>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-7 pe-lg-5" id="wilgersMap">
+
                 <h1 class="display-4 fw-bold lh-1 mb-3">The Closure Process</h1>
                 <p class="col-lg-10 fs-4">
                     Wording to Be finalized
                 </p>
-            </div>
-            <div class="col-md-10 mx-auto col-lg-5 pe-lg-5" id="wilgersMap">
-                <h1>## Image of closure gate locations</h1>
             </div>
         </div>
     </div>

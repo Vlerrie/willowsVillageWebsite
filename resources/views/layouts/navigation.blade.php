@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" aria-label="Fourth navbar example">
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top navbar-additions shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="/" style="max-width: 180px">
             @include('layouts.logo')
@@ -15,9 +15,12 @@
                        aria-expanded="false">
                         Willows Security Village
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                        <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>
+                    <ul class="dropdown-menu dropdown-menu-start">
+                        @auth()
+                            <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>
+                        @endif
                         <li><a class="dropdown-item" href="/#willowsSecurityDiv">About Willows Security Village</a></li>
+                        <li><a class="dropdown-item" href="/#benefitsDiv">Benefits</a></li>
                         <li><a class="dropdown-item" href="/#closureDiv">Closure Process</a></li>
                     </ul>
                 </li>
@@ -36,7 +39,7 @@
                        aria-expanded="false">
                         Other
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                    <ul class="dropdown-menu dropdown-menu-start">
                         <li><a class="dropdown-item" href="/wilgers">About Die Wilgers</a></li>
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
