@@ -13,9 +13,11 @@
                         <h4 class="h6 text-center">
                             Or Resend The Email By Clicking The Button Below
                         </h4>
-                        <button class="btn btn-lg w-100 btn-outline-secondary mt-3" onclick="window.location.href='/email/verification-notification'">
+                        <button class="btn btn-lg w-100 btn-outline-secondary mt-3"
+                                onclick="window.location.href='/email/verification-notification'">
                             Resend Email Verification
-                        </button><br>
+                        </button>
+                        <br>
                     </div>
                 </div>
             @else
@@ -75,26 +77,50 @@
         </div>
     </div>
     </div>
-    <div class="container-fluid col-12 px-4 py-3 bg-wvgreen shadow" id="benefitsDiv">
-        <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-            <div class="col-lg-5 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 mb-3 text-white">The Benefits</h1>
-            </div>
-            <div class="col-md-10 col-lg-7 pe-lg-5 mx-auto" id="">
-                <ul class="list-group col-10">
-                    <li class="list-group-item">
-                        <h3 class="h3 text-center">
-                            Property Value Increase
-                        </h3>
-                    </li>
-                    <li class="list-group-item">
-                        <h3 class="h3 text-center">
-                            Security For Your Family
-                        </h3>
-                    </li>
-                </ul>
+    <div class="container-fluid px-4 py-5 bg-wvgreen" id="benefitsDiv">
+        <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-white">Benefits</h1>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back" id="valueFeature">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Increased Property Value</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center">
+                                    <small>Up To 10% Increase</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back" id="safetyFeature">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Safety For Your Family</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center">
+                                    <small></small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back" id="safetyFeature">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Some more benefits?</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="d-flex align-items-center">
+                                    <small></small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
     <div class="container-fluid col-12 px-4 py-5 bg-light" style="min-height: 75vh" id="closureDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">

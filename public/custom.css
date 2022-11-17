@@ -33,3 +33,16 @@ li.event:hover {
 .navbar-additions{
     border-bottom: solid 3px #037F37;
 }
+
+.feature-back{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#valueFeature{
+    background-image: url('/img/features/value.jpg');
+}
+#safetyFeature{
+    background-image: url('/img/features/safety.jpg');
+}
