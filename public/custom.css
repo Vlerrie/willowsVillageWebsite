@@ -1,6 +1,7 @@
 body {
     background-image: url("/img/backgrounds/father-son-walking.jpg");
     background-repeat: no-repeat;
+    background-position: 12% 0;
     background-size: cover;
     background-attachment: fixed;
 }
