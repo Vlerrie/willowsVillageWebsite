@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\News;
 use App\Models\User;
+use App\ServiceProvider\VisibleEventItems;
+use App\ServiceProvider\VisibleNewsItems;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,16 +23,11 @@ class HomeController extends Controller
         $news = [];
         $events = [];
         if (Auth::check()) {
-            $news = News::whereNotNull('published')
-                ->where('published', '<', Carbon::now('Africa/Johannesburg'))
-                ->orderBy('published', 'desc')
-                ->take(10)
-                ->get();
+            $news = new VisibleNewsItems();
+            $news = $news->getVisibleItems();
 
-            $fromDate = Carbon::now('Africa/Johannesburg')->subHour();
-            $events = Event::where('date', '>', $fromDate)
-                ->orderBy('date', 'asc')
-                ->get();
+            $events = new VisibleEventItems();
+            $events = $events->getVisibleItems();
         }
 
         return view('welcome', [

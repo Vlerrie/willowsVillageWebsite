@@ -14,14 +14,16 @@
 
     <div class="row my-3">
         <div class="col-md-3">
-            <div class="form-check form-switch my-3">
-                <input class="form-check-input" name="publish" type="checkbox" role="switch"
-                       id="publish" checked>
-                <label class="form-check-label" for="publish">Publish</label>
-            </div>
+{{--            <div class="form-check form-switch my-3">--}}
+{{--                <input class="form-check-input" name="publish" type="checkbox" role="switch"--}}
+{{--                       id="publish" checked>--}}
+{{--                <label class="form-check-label" for="publish">Publish</label>--}}
+{{--            </div>--}}
             <button class="btn w-100 btn-outline-success">Save</button>
         </div>
         <div class="col-md-3">
         </div>
     </div>
 </form>
+
+<hr class="my-5">

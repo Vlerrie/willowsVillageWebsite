@@ -16,10 +16,8 @@ class NewsController extends Controller
 {
     public function create(NewsRequest $request)
     {
-        $publish = null;
-        if (isset($request->publish)) {
-            $publish = Carbon::now('Africa/Johannesburg');
-        }
+        $publish = Carbon::now('Africa/Johannesburg');
+
         $news = News::create([
             'subject' => $request->title,
             'body' => $request->body,

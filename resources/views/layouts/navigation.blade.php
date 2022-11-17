@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" aria-label="Fourth navbar example">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/" style="max-width: 200px">
+        <a class="navbar-brand" href="/" style="max-width: 180px">
             @include('layouts.logo')
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
@@ -18,7 +18,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                         <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>
                         <li><a class="dropdown-item" href="/#willowsSecurityDiv">About Willows Security Village</a></li>
-                        <li><a class="dropdown-item" href="/#wilgersDiv">About Die Wilgers Area</a></li>
+                        <li><a class="dropdown-item" href="/#closureDiv">Closure Process</a></li>
                     </ul>
                 </li>
                 @auth()
@@ -37,6 +37,7 @@
                         Other
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <li><a class="dropdown-item" href="/wilgers">About Die Wilgers</a></li>
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>

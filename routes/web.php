@@ -24,7 +24,12 @@ Route::get(
 );
 Route::get(
     '/importantContacts', function () {
-        return view('importantContacts');
+        return view('pages.importantContacts');
+    }
+);
+Route::get(
+    '/wilgers', function () {
+        return view('pages.wilgers');
     }
 );
 

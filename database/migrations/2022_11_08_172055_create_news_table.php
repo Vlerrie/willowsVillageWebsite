@@ -18,9 +18,14 @@ return new class extends Migration
             $table->string('subject', 255);
             $table->text('body');
             $table->timestamp('published', 0)->nullable();
+            $table->integer('created_by', false)->nullable();
+            $table->integer('deleted_by', false)->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
+            $table->index(['published', 'deleted_at']);
             $table->index(['published']);
+            $table->index(['deleted_at']);
         });
     }
 

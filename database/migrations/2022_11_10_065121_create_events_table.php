@@ -18,7 +18,14 @@ return new class extends Migration
             $table->string('title', 255);
             $table->timestamp('date');
             $table->string('address', 255);
+            $table->integer('created_by', false)->nullable();
+            $table->integer('deleted_by', false)->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->index(['date', 'deleted_at']);
+            $table->index(['date']);
+            $table->index(['deleted_at']);
         });
     }
 

@@ -38,6 +38,7 @@
                     <div class="tab-pane fade" id="v-pills-news" role="tabpanel"
                          aria-labelledby="v-pills-news-tab" tabindex="0">
                         @include('admin.newsForm')
+                        @include('admin.newsItems')
                     </div>
                     {{-- Create update event item --}}
                     <div class="tab-pane fade" id="v-pills-events" role="tabpanel"
@@ -139,5 +140,7 @@
         @endif
 
         $('#accountsTable').dataTable();
+        $('#newsDataTable').dataTable();
+        $('#eventDataTable').dataTable();
     </script>
 @stop
