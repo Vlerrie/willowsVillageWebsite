@@ -2,7 +2,7 @@
 
 @section('content')
     @auth()
-        <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow" id="">
+        <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow-lg">
             <span id="newsDiv" style="position:relative; top: -150px"></span>
             @if(!Auth::user()->email_verified_at && isset(Auth::user()->email))
                 <div class="row justify-content-center g-lg-5 py-5 px-lg-5">
@@ -46,108 +46,17 @@
         </div>
     @endauth
 
-    <div class="container-fluid col-12 px-4 py-3 bg-light shadow" id="willowsSecurityDiv">
-        <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-            <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 mb-3">Willows Village</h1>
-                <p class="col-lg-11 fs-4">
-                    Joining is free and gives every resident a voice.
-                    <br><br>
-                    By joining, you will be added to a mailing list and will receive general updates, that affect the
-                    area and its people. You will be able to unsubscribe from this feature, should you prefer not to be
-                    included on these emails.
-                    <br><br>
-                    With the help and guidance of a consultant, with considerable experience in the field of community
-                    enclosures, we as the Willows Village task team, are beyond excited, to announce that it IS
-                    possible and extremely important, to start with the process to close down our area to safeguard our
-                    residents. We will, however, need an absolute unified front and total support of the community, to
-                    drive this project to completion. NEED MORE INFO & DETAIL
-                    <br><br>
-                    We strive towards a unified and strong community, that will look out to improve the safety and
-                    well-being of our people and our suburb. So we urge each and everyone to help us, by joining this
-                    site and being an active member of our community
-                </p>
-            </div>
-            <div class="col-md-10 mx-auto col-lg-5 px-lg-5 align-items-top">
-                @auth()
-                    <h1>What goes here?</h1>
-                @else
-                    @include('auth.registerForm')
-                @endauth
-            </div>
-        </div>
-    </div>
+    <div class="container-fluid col-12 px-4 py-3 bg-light shadow-lg" id="willowsSecurityDiv">
+        @include('partials.landingSegments.vision')
     </div>
 
-    <div class="container-fluid px-4 py-5" id="">
+    <div class="container-fluid px-4 py-5">
         <span id="benefitsDiv" style="position:relative; top: -150px"></span>
-        <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-white">Benefits</h1>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back" id="valueFeature">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Increased Property Value</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="d-flex align-items-center">
-                                    <small>Up To 10% Increase</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back" id="safetyFeature">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Safety For Your Family</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="d-flex align-items-center">
-                                    <small></small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back" id="safetyFeature">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Some more benefits?</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="d-flex align-items-center">
-                                    <small></small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        @include('partials.landingSegments.benefits')
     </div>
 
-    <div class="container-fluid col-12 px-4 py-5 bg-light" style="min-height: 75vh" id="">
+    <div class="container-fluid col-12 px-4 py-5 bg-light shadow-above" style="min-height: 75vh">
         <span id="closureDiv" style="position:relative; top: -150px"></span>
-        <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
-            <div class="col-lg-5 text-center text-lg-start">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Wrxh4XcS_ZXLJd6-n4Ctl3J3eJbMsFc&ehbc=2E312F" width="100%" height="500px"></iframe>
-            </div>
-            <div class="col-md-10 mx-auto col-lg-7 pe-lg-5" id="wilgersMap">
-
-                <h1 class="display-4 fw-bold lh-1 mb-3">The Closure Process</h1>
-                <p class="col-lg-10 fs-4">
-                    Wording to Be finalized
-                </p>
-            </div>
-        </div>
+        @include('partials.landingSegments.closureProcess')
     </div>
-    {{-- <div class="container-fluid px-4 py-3 bg-secondary shadow" id="services"> --}}
-    {{-- @include('partials.services') --}}
-    {{-- </div> --}}
-    {{--    <div style="height: 40vh"></div>--}}
-    {{--    @auth() --}}
-    {{--    <div class="container-fluid px-4 py-5 bg-light mt-5" id="supportUs">--}}
-    {{--        @include('partials.support')--}}
-    {{--    </div>--}}
-    {{--    @endauth --}}
 @stop

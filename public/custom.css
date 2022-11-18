@@ -1,5 +1,6 @@
 body {
-    background-color: #01843A;
+    /*background-color: #01843A;*/
+    background-color: #0ab353;
     /*background-image: url("/img/backgrounds/father-son-walking.jpg");*/
     /*background-repeat: no-repeat;*/
     /*background-position: 12% 0;*/
@@ -7,9 +8,9 @@ body {
     /*background-attachment: fixed;*/
 }
 
-.default-gradient{
-    background: #9CECFB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2A7350, #1A943B, #2B9D50);  /* Chrome 10-25, Safari 5.1-6 */
+.default-gradient {
+    background: #9CECFB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2A7350, #1A943B, #2B9D50); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2A7350, #1A943B, #2B9D50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -22,27 +23,40 @@ li.event:hover {
 }
 
 
-.bg-wvbrown{
+.bg-wvbrown {
     background-color: #6C3F2D;
 }
 
-.bg-wvgreen{
+.bg-wvgreen {
     background-color: #01843A;
 }
 
-.navbar-additions{
+.navbar-additions {
     border-bottom: solid 3px #037F37;
 }
 
-.feature-back{
+.feature-back {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#valueFeature{
+#valueFeature {
     background-image: url('/img/features/value.jpg');
 }
-#safetyFeature{
+
+#safetyFeature {
     background-image: url('/img/features/safety.jpg');
+}
+
+#quietSteetFeature {
+    background-image: url('/img/features/street.jpg');
+}
+
+.shadow-above {
+    box-shadow: 0 -1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
+.text-shadow {
+    text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
 }
