@@ -77,7 +77,7 @@
         </div>
     </div>
     </div>
-    <div class="container-fluid px-4 py-5 bg-wvgreen" id="benefitsDiv">
+    <div class="container-fluid px-4 py-5" id="benefitsDiv">
         <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-white">Benefits</h1>
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
@@ -125,7 +125,7 @@
     <div class="container-fluid col-12 px-4 py-5 bg-light" style="min-height: 75vh" id="closureDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
             <div class="col-lg-5 text-center text-lg-start">
-                <h1>## Image of closure gate locations</h1>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Wrxh4XcS_ZXLJd6-n4Ctl3J3eJbMsFc&ehbc=2E312F" width="100%" height="500px"></iframe>
             </div>
             <div class="col-md-10 mx-auto col-lg-7 pe-lg-5" id="wilgersMap">
 

@@ -24,15 +24,6 @@
                         <li><a class="dropdown-item" href="/#closureDiv">Closure Process</a></li>
                     </ul>
                 </li>
-                @auth()
-                    @if(Auth::user()->admin)
-                        <li class="nav-item">
-                            <a class="nav-link" id="adminNav" aria-current="page" href="/admin/dashboard">
-                                Admin
-                            </a>
-                        </li>
-                    @endif
-                @endif
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="otherNav" href="" data-bs-toggle="dropdown"
@@ -44,6 +35,16 @@
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
                 </li>
+
+                @auth()
+                    @if(Auth::user()->admin)
+                        <li class="nav-item">
+                            <a class="nav-link" id="adminNav" aria-current="page" href="/admin/dashboard">
+                                Admin
+                            </a>
+                        </li>
+                    @endif
+                @endif
             </ul>
 
             <ul class="navbar-nav mb-2 mb-md-0">
