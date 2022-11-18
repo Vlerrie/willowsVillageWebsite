@@ -27,7 +27,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" id="" aria-current="page" href="/">
-                        Willows Security Village
+                        Willows Village
                     </a>
                 </li>
                 <li class="nav-item">

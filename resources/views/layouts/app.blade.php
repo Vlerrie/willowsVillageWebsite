@@ -40,7 +40,7 @@
     </div>
     <div class="row align-items-center">
         <div class="col-12 text-center">
-            <p class="text-center text-muted my-0">Copyright Willows Security Village, All rights reserved</p>
+            <p class="text-center text-muted my-0">Copyright Willows Village, All rights reserved</p>
         </div>
     </div>
 </div>
