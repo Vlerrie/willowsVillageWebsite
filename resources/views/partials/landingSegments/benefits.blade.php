@@ -32,7 +32,7 @@
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="quietSteetFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Less Unnecessary Foot & Vehicle Trafic</h3>
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Less Unnecessary Foot & Vehicle Traffic</h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="d-flex align-items-center">
                             <small></small>
