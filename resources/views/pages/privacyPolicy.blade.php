@@ -82,7 +82,7 @@
                             page visit).</p>
                     </li>
                     <li>
-                        <p><strong>Website</strong> refers to Willows Security Village, accessible
+                        <p><strong>Website</strong> refers to Willows Village, accessible
                             from <a
                                 href="https://willowsvillage.co.za/" rel="external nofollow noopener" target="_blank">https://willowsvillage.co.za/</a>
                         </p>

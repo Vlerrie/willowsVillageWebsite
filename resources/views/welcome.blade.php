@@ -2,7 +2,8 @@
 
 @section('content')
     @auth()
-        <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow" id="newsDiv">
+        <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow" id="">
+            <span id="newsDiv" style="position:relative; top: -150px"></span>
             @if(!Auth::user()->email_verified_at && isset(Auth::user()->email))
                 <div class="row justify-content-center g-lg-5 py-5 px-lg-5">
                     <div class="col-md-4 bg-light p-5 rounded-3">
@@ -48,7 +49,7 @@
     <div class="container-fluid col-12 px-4 py-3 bg-light shadow" id="willowsSecurityDiv">
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 mb-3">Willows Security Village</h1>
+                <h1 class="display-4 fw-bold lh-1 mb-3">Willows Village</h1>
                 <p class="col-lg-11 fs-4">
                     Joining is free and gives every resident a voice.
                     <br><br>
@@ -57,7 +58,7 @@
                     included on these emails.
                     <br><br>
                     With the help and guidance of a consultant, with considerable experience in the field of community
-                    enclosures, we as the Willows Security Village task team, are beyond excited, to announce that it IS
+                    enclosures, we as the Willows Village task team, are beyond excited, to announce that it IS
                     possible and extremely important, to start with the process to close down our area to safeguard our
                     residents. We will, however, need an absolute unified front and total support of the community, to
                     drive this project to completion. NEED MORE INFO & DETAIL
@@ -77,7 +78,9 @@
         </div>
     </div>
     </div>
-    <div class="container-fluid px-4 py-5" id="benefitsDiv">
+
+    <div class="container-fluid px-4 py-5" id="">
+        <span id="benefitsDiv" style="position:relative; top: -150px"></span>
         <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-white">Benefits</h1>
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
@@ -122,7 +125,9 @@
         </div>
 
     </div>
-    <div class="container-fluid col-12 px-4 py-5 bg-light" style="min-height: 75vh" id="closureDiv">
+
+    <div class="container-fluid col-12 px-4 py-5 bg-light" style="min-height: 75vh" id="">
+        <span id="closureDiv" style="position:relative; top: -150px"></span>
         <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
             <div class="col-lg-5 text-center text-lg-start">
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Wrxh4XcS_ZXLJd6-n4Ctl3J3eJbMsFc&ehbc=2E312F" width="100%" height="500px"></iframe>

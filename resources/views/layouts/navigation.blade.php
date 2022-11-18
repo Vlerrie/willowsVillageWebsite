@@ -10,33 +10,33 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-{{--                <li class="nav-item dropdown">--}}
-{{--                    <a class="nav-link dropdown-toggle" id="wsvNav" href="" data-bs-toggle="dropdown"--}}
-{{--                       aria-expanded="false">--}}
-{{--                        Willows Security Village--}}
-{{--                    </a>--}}
-{{--                    <ul class="dropdown-menu dropdown-menu-start">--}}
-{{--                        @auth()--}}
-{{--                            <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>--}}
-{{--                        @endif--}}
-{{--                        <li><a class="dropdown-item" href="/#willowsSecurityDiv">About Willows Security Village</a></li>--}}
-{{--                        <li><a class="dropdown-item" href="/#benefitsDiv">Benefits</a></li>--}}
-{{--                        <li><a class="dropdown-item" href="/#closureDiv">Closure Process</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+                {{--                <li class="nav-item dropdown">--}}
+                {{--                    <a class="nav-link dropdown-toggle" id="wsvNav" href="" data-bs-toggle="dropdown"--}}
+                {{--                       aria-expanded="false">--}}
+                {{--                        Willows Security Village--}}
+                {{--                    </a>--}}
+                {{--                    <ul class="dropdown-menu dropdown-menu-start">--}}
+                {{--                        @auth()--}}
+                {{--                            <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>--}}
+                {{--                        @endif--}}
+                {{--                        <li><a class="dropdown-item" href="/#willowsSecurityDiv">About Willows Security Village</a></li>--}}
+                {{--                        <li><a class="dropdown-item" href="/#benefitsDiv">Benefits</a></li>--}}
+                {{--                        <li><a class="dropdown-item" href="/#closureDiv">Closure Process</a></li>--}}
+                {{--                    </ul>--}}
+                {{--                </li>--}}
 
                 <li class="nav-item">
-                    <a class="nav-link" id="adminNav" aria-current="page" href="/">
+                    <a class="nav-link" id="" aria-current="page" href="/">
                         Willows Security Village
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="adminNav" aria-current="page" href="/#benefitsDiv">
+                    <a class="nav-link" id="" aria-current="page" href="/#benefitsDiv">
                         Benefits
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="adminNav" aria-current="page" href="/#closureDiv">
+                    <a class="nav-link" id="" aria-current="page" href="/#closureDiv">
                         Closure Process
                     </a>
                 </li>
@@ -52,6 +52,9 @@
                     </ul>
                 </li>
 
+            </ul>
+
+            <ul class="navbar-nav mb-2 mb-md-0">
                 @auth()
                     @if(Auth::user()->admin)
                         <li class="nav-item">
@@ -60,11 +63,6 @@
                             </a>
                         </li>
                     @endif
-                @endif
-            </ul>
-
-            <ul class="navbar-nav mb-2 mb-md-0">
-                @auth()
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                            aria-expanded="false">{{Auth::user()->name}}</a>
