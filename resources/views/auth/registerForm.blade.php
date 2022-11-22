@@ -89,6 +89,6 @@
                                 <small class="text-muted">Already have an account? <a href="/login">login here</a></small>
                             </form>
 
-                            <script async
+                            <script defer
                                 src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_CLOUD_API_KEY')}}&libraries=places&callback=initMap">
                             </script>

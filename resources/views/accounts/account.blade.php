@@ -187,7 +187,7 @@
         </div>
     </div>
 
-    <script async
+    <script defer
             src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_CLOUD_API_KEY')}}&libraries=places&callback=initMap">
     </script>
 
