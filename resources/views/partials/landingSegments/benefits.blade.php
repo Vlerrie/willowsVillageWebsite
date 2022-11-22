@@ -1,4 +1,4 @@
-<h1 class="display-4 fw-bold lh-1 mb-3 text-center text-white text-shadow">Benefits</h1>
+<h1 class="display-4 fw-bold lh-1 mb-5 text-center text-white text-shadow">Benefits</h1>
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
         <div class="col">
