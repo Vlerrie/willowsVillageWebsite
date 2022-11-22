@@ -52,6 +52,15 @@ li.event:hover {
 #quietSteetFeature {
     background-image: url('/img/features/street.jpg');
 }
+#crimeFeature {
+    background-image: url('/img/features/crime.png');
+}
+#securityFeature {
+    background-image: url('/img/features/security.jpg');
+}
+#savingsFeature {
+    background-image: url('/img/features/savings.jpg');
+}
 
 .shadow-above {
     box-shadow: 0 -1rem 3rem rgba(0, 0, 0, .175) !important;
