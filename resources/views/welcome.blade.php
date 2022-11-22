@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Home
+@endsection
+
 @section('content')
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow-lg">

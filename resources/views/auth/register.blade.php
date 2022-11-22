@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Register
+@endsection
+
 @section('content')
     <div class="my-5"></div>
     <div class="container-fluid">

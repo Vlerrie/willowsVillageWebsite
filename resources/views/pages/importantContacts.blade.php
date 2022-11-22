@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Important Contacts
+@endsection
+
 @section('content')
     <div class="container-fluid min-vh-100">
         <div class="row justify-content-center my-5">

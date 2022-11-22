@@ -9,7 +9,7 @@
     {{--    Header--}}
     <tr>
         <td style="padding:30px 20% 20px 20%">
-            <img src="{{ $message->embed(public_path('/img/logos/wsv_trans_lean.webp')) }}" width="100%">
+            <img alt="willows logo" src="{{ $message->embed(public_path('/img/logos/wsv_trans_lean.webp')) }}" width="100%">
         </td>
     </tr>
     {{--    Content--}}

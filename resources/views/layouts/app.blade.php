@@ -4,15 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Willows Village') }}</title>
-{{--    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">--}}
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <title>{{ config('app.name', 'Willows Village') }} - @yield('title')</title>
+
+    <link rel="preload" href="/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"></noscript>
+
     <script defer src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script defer src="/js/autocomplete.js"></script>
-    <link href="/custom.css" rel="stylesheet">
-    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
-    {{--    <link href="/fontawesome/css/brands.css" rel="stylesheet">--}}
-    <link href="/fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="preload" href="/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/custom.css"></noscript>
+
+    <link rel="preload" href="/fontawesome/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/fontawesome/css/fontawesome.css"></noscript>
+
+    <link rel="preload" href="/fontawesome/css/solid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/fontawesome/css/solid.css"></noscript>
+
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-JNQJ469P10"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];

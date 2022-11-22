@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Wilgers
+@endsection
+
 @section('content')
 
     <div class="container-fluid col-12 px-4 py-5 bg-light mb-5" id="wilgersDiv">
@@ -19,9 +23,9 @@
                 </p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5 pe-lg-5" id="wilgersMap">
-                <iframe
+                <iframe title="Die Wilgers Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14373.168142935181!2d28.304539589442278!3d-25.760915863014436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955e3738401f33%3A0xcf3d42415aa4c6af!2sDie%20Wilgers%2C%20Pretoria%2C%200184!5e0!3m2!1sen!2sza!4v1668093623428!5m2!1sen!2sza"
-                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="500" style="border:0;" allowfullscreen=""
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

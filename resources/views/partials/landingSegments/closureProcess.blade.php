@@ -30,7 +30,7 @@
     </div>
     <div class="col-lg-5 col-md-6 pe-lg-5">
         <h1 class="display-4 fw-bold lh-1 my-3">Closure Map</h1>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Wrxh4XcS_ZXLJd6-n4Ctl3J3eJbMsFc&ehbc=2E312F"
+        <iframe title="Willows Village" src="https://www.google.com/maps/d/u/0/embed?mid=1Wrxh4XcS_ZXLJd6-n4Ctl3J3eJbMsFc&ehbc=2E312F"
                 width="100%" height="600px"></iframe>
     </div>
 </div>
