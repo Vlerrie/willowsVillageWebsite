@@ -14,11 +14,11 @@
     <link rel="preload" href="/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/custom.css"></noscript>
 
-    <link rel="preload" href="/fontawesome/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/fontawesome/css/fontawesome.css"></noscript>
+    <link rel="preload" href="/fontawesome/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css"></noscript>
 
-    <link rel="preload" href="/fontawesome/css/solid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/fontawesome/css/solid.css"></noscript>
+    <link rel="preload" href="/fontawesome/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/fontawesome/css/solid.min.css"></noscript>
 
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-JNQJ469P10"></script>
     <script defer>
