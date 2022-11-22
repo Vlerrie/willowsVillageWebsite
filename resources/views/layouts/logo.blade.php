@@ -1,1 +1,1 @@
-<img width="100%" src="/img/logos/wsv_trans_lean.png">
+<img width="100%" src="/img/logos/wsv_trans_lean.webp">

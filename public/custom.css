@@ -42,24 +42,24 @@ li.event:hover {
 }
 
 #valueFeature {
-    background-image: url('/img/features/value.jpg');
+    background-image: url('/img/features/value.webp');
 }
 
 #safetyFeature {
-    background-image: url('/img/features/safety.jpg');
+    background-image: url('/img/features/safety.webp');
 }
 
 #quietSteetFeature {
-    background-image: url('/img/features/street.jpg');
+    background-image: url('/img/features/street.webp');
 }
 #crimeFeature {
-    background-image: url('/img/features/crime.png');
+    background-image: url('/img/features/crime.webp');
 }
 #securityFeature {
-    background-image: url('/img/features/security.jpg');
+    background-image: url('/img/features/security.webp');
 }
 #savingsFeature {
-    background-image: url('/img/features/savings.jpg');
+    background-image: url('/img/features/savings.webp');
 }
 
 .shadow-above {
