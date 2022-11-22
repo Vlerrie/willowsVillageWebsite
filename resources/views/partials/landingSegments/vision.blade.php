@@ -7,6 +7,7 @@
 
         </p>
 
+        @guest()
         <hr class="my-5">
 
         <h1 class="display-5 fw-bold lh-1 mb-3">Why You Should Join</h1>
@@ -19,10 +20,14 @@
 {{--            <li>Safer streets for our children and ourselves</li>--}}
 {{--            <li>Safer living and peace of mind</li>--}}
 {{--        </ul>--}}
+        @endguest
     </div>
     <div class="col-md-10 mx-auto col-lg-5 px-lg-5 align-items-top">
         @auth()
-            <h1>What goes here?</h1>
+            @if(count($events) > 0)
+                <h1 class="h1 fw-bold lh-1 mb-3">Upcoming Events:</h1>
+                @include('partials.eventItems')
+            @endif
         @else
             @include('auth.registerForm')
         @endauth

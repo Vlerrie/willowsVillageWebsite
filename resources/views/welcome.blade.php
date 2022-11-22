@@ -22,16 +22,8 @@
                     </div>
                 </div>
             @else
-                <div class="row g-lg-5 py-5 px-lg-5 overflow-auto" style="max-height: 700px">
-                    <div class="col-md-4">
-                        @if(count($events) == 0)
-                            <h1 class="h1 fw-bold lh-1 mb-3">No Events</h1>
-                        @else
-                            <h1 class="h1 fw-bold lh-1 mb-3">Upcoming Events:</h1>
-                            @include('partials.eventItems')
-                        @endif
-                    </div>
-                    <div class="col-md-8">
+                <div class="row g-lg-5 py-5 px-lg-5 justify-content-center overflow-auto" style="max-height: 700px">
+                    <div class="col-md-10">
                         {{--                        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome Back {{ Auth::user()->name }}</h1>--}}
                         @if(count($news) == 0)
                             <h1 class="h1 fw-bold lh-1 mb-3">No News</h1>
