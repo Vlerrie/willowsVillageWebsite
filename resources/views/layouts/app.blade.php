@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Willows Village') }}</title>
-    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/autocomplete.js"></script>
+{{--    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">--}}
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="/bootstrap/js/bootstrap.bundle.min.js" async></script>
+    <script src="/js/autocomplete.js" async></script>
     <link href="/custom.css" rel="stylesheet">
     <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
     {{--    <link href="/fontawesome/css/brands.css" rel="stylesheet">--}}
     <link href="/fontawesome/css/solid.css" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNQJ469P10"></script>
-    <script>
+    <script async>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());

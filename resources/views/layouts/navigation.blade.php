@@ -92,18 +92,3 @@
         </div>
     </div>
 </nav>
-<script>
-    let pagePath = window.location.pathname;
-    switch (pagePath) {
-        case '/':
-            document.getElementById('wsvNav').classList.add('active');
-            break;
-        case '/admin/dashboard':
-            document.getElementById('adminNav').classList.add('active');
-            break;
-        default:
-            document.getElementById('otherNav').classList.add('active');
-            console.log(pagePath);
-            break;
-    }
-</script>
