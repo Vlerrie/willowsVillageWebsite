@@ -1,4 +1,4 @@
-<form class="px-4 py-1 p-md-4 border rounded-3 bg-light shadow" onsubmit="return validateRegister()" method="post" action="/register">
+<form class="px-4 py-2 p-md-4 border rounded-3 bg-light shadow" onsubmit="return validateRegister()" method="post" action="/register">
     <div class="row justify-content-center mb-3">
         <div class="col-6">
             @include('layouts.logo')
