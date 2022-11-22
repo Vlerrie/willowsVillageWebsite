@@ -1,7 +1,7 @@
 <h1 class="display-4 fw-bold lh-1 mb-5 text-center text-white text-shadow">Benefits</h1>
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
-        <div class="col">
+        <div class="col my-2">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="valueFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
@@ -16,7 +16,7 @@
         </div>
 
 
-        <div class="col">
+        <div class="col my-2">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="securityFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col my-2">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="quietSteetFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
@@ -44,8 +44,8 @@
             </div>
         </div>
     </div>
-    <div class="row row-cols-2 row-cols-lg-3 align-items-stretch py-5">
-        <div class="col">
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
+        <div class="col my-2">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="crimeFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col my-2">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="safetyFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col my-2">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-back"
                  id="savingsFeature">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow">
