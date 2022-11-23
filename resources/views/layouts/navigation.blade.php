@@ -47,6 +47,7 @@
                         Other
                     </a>
                     <ul class="dropdown-menu dropdown-menu-start">
+                        <li><a class="dropdown-item" href="/faq">Frequently Asked Questions</a></li>
                         <li><a class="dropdown-item" href="/wilgers">About Die Wilgers</a></li>
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>

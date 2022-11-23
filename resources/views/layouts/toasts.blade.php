@@ -24,7 +24,6 @@ session()->flash('flash_message', [
 
 <script>
     const toastLiveExamples = document.querySelectorAll('.toast');
-    console.log(toastLiveExamples);
     let toast;
     toastLiveExamples.forEach(function (e) {
         toast = new bootstrap.Toast(e)

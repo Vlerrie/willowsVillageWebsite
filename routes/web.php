@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\faqController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,9 @@ Route::get(
         return view('pages.wilgers');
     }
 );
+
+Route::get('/faq', [faqController::class, 'index']);
+Route::get('/faq/search/{searchTerm}', [faqController::class, 'searchTerm']);
 
 Route::get(
     '/dashboard', function () {

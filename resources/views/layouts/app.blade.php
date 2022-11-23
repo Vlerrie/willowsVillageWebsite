@@ -43,6 +43,7 @@
         <div class="col-md-6 text-center">
             <a class="link-light mx-2" href="/privacy-policy">Privacy Policy</a>
             <a class="link-light mx-2" href="/terms">Terms and Conditions</a>
+            <a class="link-light mx-2" href="/faq">Frequently Asked Questions</a>
             {{-- <a class="link-light mx-2" href="/constitution">Constitution</a> --}}
         </div>
     </div>
