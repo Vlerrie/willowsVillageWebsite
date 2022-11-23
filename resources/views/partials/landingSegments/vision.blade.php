@@ -1,9 +1,12 @@
 <div class="row align-items-center g-lg-5 py-5 ps-lg-5">
     <div class="col-lg-7 text-center text-lg-start">
         <h1 class="display-2 fw-bold lh-1 mb-3">Willows Village</h1>
-        <p class="col-lg-11 fs-4">
-            Our vision is to help provide a safe community that prioritises the interest of its residents at all times.
-            <br>
+        <p class="col-lg-11 fs-3">
+            Over recent years most of the areas bordering ours have created security perimeters around themselves. We
+            believe that it could be a cause for our crime rates spiking.
+            By closing down the willows area with a security perimeter including booms, cameras and guards we believe
+            that our vision to help provide a safe community that prioritises the interest of its residents at all times
+            could become a reality.
 
         </p>
 
