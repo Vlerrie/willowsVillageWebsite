@@ -6,11 +6,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Willows Village') }} - @yield('title')</title>
 
-    <link rel="preload" href="/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"></noscript>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+{{--    <noscript><link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"></noscript>--}}
 
     <script defer src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script defer src="/js/autocomplete.js"></script>
+
     <link rel="preload" href="/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/custom.css"></noscript>
 
