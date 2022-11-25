@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Route;
  |
  */
 
+Route::get(
+    '/soon', function () {
+    return view('errors.comingSoon');
+}
+);
+
 require __DIR__ . '/policypages.php';
 
 Route::get('/', [HomeController::class, 'dashboard']);
