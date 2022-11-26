@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Rules\SaMobileNumber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
 
 class AccountController extends Controller
@@ -22,10 +24,19 @@ class AccountController extends Controller
 
     public function update(Request $request)
     {
+        $request->merge([
+            'cell' => str_replace('+', '', $request->cell)
+        ]);
+        if (Str::startsWith($request->cell, '0')) {
+            $request->merge([
+                'cell' => '27' . substr($request->cell, 1)
+            ]);
+        }
+
         $request->validate(
             [
                 'email' => ['sometimes', 'email', 'max:255'],
-                'cell' => ['sometimes', 'numeric', 'max:13', 'min:10'],
+                'cell' => ['sometimes', 'numeric', new SaMobileNumber()],
                 'name' => ['required', 'string', 'max:255'],
                 'surname' => ['required', 'string', 'max:255'],
                 'street_number' => ['required'],

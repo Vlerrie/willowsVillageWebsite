@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Rules\SaMobileNumber;
+use App\Rules\UniqueIgnoreEmpty;
 use App\ServiceProvider\GoogleRecaptcha;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -38,7 +39,6 @@ class RegisteredUserController extends Controller
     {
         $recaptcha = new GoogleRecaptcha();
         $valid = $recaptcha->verifyRequest($request->all()['g-recaptcha-response'] ,$request->getClientIp());
-//        dd('once');
 
         if (!$valid->success){
             session()->flash('flash_message', [
@@ -58,12 +58,23 @@ class RegisteredUserController extends Controller
             ]);
         }
 
+        if (isset($request->password, $request->email)){
+            $exist = User::where('email', $request->email)
+                ->first();
+        }elseif(isset($request->password, $request->cell)){
+            $exist = User::where('cell', $request->cell)
+                ->first();
+        }
+        if (isset($exist->id) && !isset($exist->password)){
+            $exist->delete();
+        }
+
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
-            'email' => ['required_without:cell', 'nullable', 'string', 'email', 'max:255', 'unique:users'],
-            'cell' => ['required_without:email', 'nullable', 'string', new SaMobileNumber()],
-            'password' => ['required', Rules\Password::defaults()],
+            'email' => ['required_without:cell', 'nullable', 'string', 'email', 'max:255', new UniqueIgnoreEmpty('users')],
+            'cell' => ['required_without:email', 'nullable', 'string', new SaMobileNumber(), new UniqueIgnoreEmpty('users')],
+            'password' => ['required_with:cell', 'nullable', Rules\Password::defaults()],
             'street_number' => ['required'],
             'route' => ['required'],
             'sublocality' => ['required'],
@@ -78,12 +89,17 @@ class RegisteredUserController extends Controller
             'postal_code.required' => 'Please start typing in the field below until you see a google suggestion to click on.',
         ]);
 
+        $password = null;
+        if (!empty($request->password)){
+            $password = Hash::make($request->password);
+        }
+
         $user = User::create([
             'name' => $request->name,
             'surname' => $request->surname,
             'email' => $request->email,
             'cell' => $request->cell,
-            'password' => Hash::make($request->password),
+            'password' => $password,
             'street_number' => $request->street_number,
             'route' => $request->route,
             'sublocality' => $request->sublocality,
@@ -94,12 +110,19 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
-
+        if (isset($password)){
+            Auth::login($user);
+            session()->flash('flash_message', [
+                'heading' => 'Registration Successful',
+                'message' => 'Hi ' . Auth::user()->name . ', thank you for joining us!',
+            ]);
+        }
         session()->flash('flash_message', [
-            'heading' => 'Registration Successful',
-            'message' => 'Hi ' . Auth::user()->name . ', thank you for joining us!',
+            'heading' => 'Signup Successful',
+            'message' => 'Thank you for joining the mailing list. You are always welcome to register an account at a later stage.',
         ]);
+
+
 
         return redirect(RouteServiceProvider::HOME);
     }

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email')->unique()->nullable();
             $table->string('cell', 13)->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->boolean('google_login')->default(false);
             $table->string('street_number')->nullable();
             $table->string('route')->nullable();
@@ -37,6 +37,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
+            $table->index(['password']);
             $table->index(['cell']);
             $table->index(['email']);
             $table->index(['email', 'comm_newsletter']);

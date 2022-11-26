@@ -11,19 +11,17 @@
         </p>
 
         @guest()
-            <hr class="my-5">
+{{--            <hr class="my-5">--}}
 
-            <h1 class="display-4 fw-bold lh-1 mb-3 text-center">Why You Should Join</h1>
-            <p class="fs-3 text-center">
-                Together our community can create a safe environment for all residents
+            <h1 class="display-5 fw-bold lh-1 mb-3 mt-5">Consider Joining</h1>
+            <p class="fs-3">
+                Together our community can create a safe environment for all residents.
             </p>
-            <hr class="mx-auto my-4 col-4">
-            <p class="fs-3 text-center">
-                Frequent communication will keep you updated with what is going on in our area
+            <p class="fs-3">
+                Frequent communication will keep you updated with what is going on in our area.
             </p>
-            <hr class="mx-auto my-4 col-4">
-            <p class="fs-3 text-center">
-                Receive updates on the progress of the area closure as it progresses
+            <p class="fs-3">
+                Receive updates on the progress of the area closure as it progresses.
             </p>
             {{--        The following benefits are most likely to be achieved by the proposed scheme:--}}
             {{--        <ul class="fs-4">--}}

@@ -16,7 +16,7 @@
                value="{{ old('name') }}">
         <label for="floatingName">
             <i class="fa-solid fa-user"></i>
-            Name
+            Name <span class="text-danger">*</span>
         </label>
     </div>
     @error('surname')
@@ -27,7 +27,7 @@
                value="{{ old('surname') }}">
         <label for="floatingSurname">
             <i class="fa-solid fa-user"></i>
-            Surname
+            Surname <span class="text-danger">*</span>
         </label>
     </div>
     @error('email')
@@ -78,7 +78,7 @@
         <input type="hidden" id="postal_code" name="postal_code">
         <label for="floatingFieldThing">
             <i class="fa-solid fa-location-pin"></i>
-            Your Street Address
+            Your Street Address <span class="text-danger">*</span>
         </label>
     </div>
     <button
@@ -93,6 +93,8 @@
     <i class="fa-solid fa-clipboard-list ms-2"></i>
     </button>
     <hr class="my-4">
+    <small class="text-muted">Either email or cell combined with a password is required to create an account.</small><br>
+    <small class="text-muted">By entering an email without a password you will be added to a mailing list only.</small><br>
     <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small><br>
     <small class="text-muted">Already have an account? <a href="/login">login here</a></small>
 </form>

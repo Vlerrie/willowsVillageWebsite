@@ -43,15 +43,16 @@
                                                @endif value="{{ $account->email }}">
                                         <label for="floatingEmail">Email address</label>
                                     </div>
+                                    @error('cell')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @endif
                                     <div class="form-floating mb-3">
-                                        <input type="tel" name="cell" class="form-control" id="floatingCell" disabled
+                                        <input type="tel" name="cell" class="form-control" id="floatingCell" @if(isset($account->cell)) disabled @endif
                                                value="{{ $account->cell }}">
                                         <label for="floatingEmail">Mobile Number</label>
                                     </div>
 
-                                    @error('name')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @endif
+
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="floatingName" name="name"
                                                placeholder="John" value="{{ $account->name }}">
