@@ -84,7 +84,7 @@
     <button
         data-sitekey="{{env('GOOGLE_RECAP_KEY')}}"
         data-callback='onRegister'
-        data-action='submit'
+        data-action='register'
         class="g-recaptcha w-100 btn btn-lg btn-success"
         id="registerButton"
         type="submit"

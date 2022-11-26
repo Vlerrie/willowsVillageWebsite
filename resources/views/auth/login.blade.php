@@ -40,7 +40,7 @@
                 <button
                     data-sitekey="{{env('GOOGLE_RECAP_KEY')}}"
                     data-callback='onLogin'
-                    data-action='submit'
+                    data-action='login'
                     class="g-recaptcha w-100 btn btn-lg btn-success" type="submit"
                     onclick="setTimeout(() => this.setAttribute('disabled', true), 20);">
                     Sign In

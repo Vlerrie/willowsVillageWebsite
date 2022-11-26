@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Auth;
 
+use App\ServiceProvider\GoogleRecaptcha;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
@@ -38,6 +39,19 @@ class LoginRequest extends FormRequest
 
     public function prepareForValidation()
     {
+        $recaptcha = new GoogleRecaptcha();
+        $valid = $recaptcha->verifyRequest($this->request->all()['g-recaptcha-response'] ,$this->getClientIp());
+
+        if (!$valid->success){
+            session()->flash('flash_message', [
+                'heading' => 'reCaptcha Error',
+                'message' => 'Something went wrong please try again',
+                'type' => 'bg-warning'
+            ]);
+            return back();
+        }
+
+
         if (is_numeric($this->email)) {
             $this->merge([
                 'cell' => str_replace('+', '', $this->email)

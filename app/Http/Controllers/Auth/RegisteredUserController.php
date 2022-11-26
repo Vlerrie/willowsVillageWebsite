@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Rules\SaMobileNumber;
+use App\ServiceProvider\GoogleRecaptcha;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,19 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        $recaptcha = new GoogleRecaptcha();
+        $valid = $recaptcha->verifyRequest($request->all()['g-recaptcha-response'] ,$request->getClientIp());
+//        dd('once');
+
+        if (!$valid->success){
+            session()->flash('flash_message', [
+                'heading' => 'reCaptcha Error',
+                'message' => 'Something went wrong please try again',
+                'type' => 'bg-warning'
+            ]);
+            return back();
+        }
+
         $request->merge([
             'cell' => str_replace('+', '', $request->cell)
         ]);
