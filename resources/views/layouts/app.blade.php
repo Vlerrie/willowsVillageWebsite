@@ -22,6 +22,7 @@
     <noscript><link rel="stylesheet" href="/fontawesome/css/solid.min.css"></noscript>
 
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-JNQJ469P10"></script>
+    <script defer src="https://www.google.com/recaptcha/api.js"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
