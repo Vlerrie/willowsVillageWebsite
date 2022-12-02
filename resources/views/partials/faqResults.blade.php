@@ -6,7 +6,7 @@
             </h4>
             <hr class="my-4 col-6 mx-auto">
             <p class="fs-4">
-                {{$f->answer}}
+                {!! $f->answer !!}
             </p>
         </div>
     </div>
