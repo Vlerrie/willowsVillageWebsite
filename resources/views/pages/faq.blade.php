@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    FAQ
+    Frequently Asked Questions
+@endsection
+
+
+@section('metaDescription')
+    <meta name="description" content="Frequently asked questions about die wilgers and the closure project">
 @endsection
 
 @section('content')

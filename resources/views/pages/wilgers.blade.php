@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    Wilgers
+    Die Wilgers Area
+@endsection
+
+
+@section('metaDescription')
+    <meta name="description" content="More general information about die wilgers and surrounding points of interests">
 @endsection
 
 @section('content')
