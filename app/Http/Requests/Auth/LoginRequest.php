@@ -86,11 +86,20 @@ class LoginRequest extends FormRequest
             ]);
         }
 
+        $user = Auth::user();
         session()->flash('flash_message', [
             'heading' => 'Authenticated',
-            'message' => 'Welcome back ' . Auth::user()->name,
+            'message' => 'Welcome back ' . $user->name,
             'type' => 'bg-success'
         ]);
+//        session()->put('user', [
+//            'id' => $user->id,
+//            'name' => $user->name,
+//            'surname' => $user->surname,
+//            'email' => $user->email,
+//            'email_verified_at' => $user->email_verified_at,
+//            'admin' => $user->admin
+//        ]);
 
         RateLimiter::clear($this->throttleKey());
     }
