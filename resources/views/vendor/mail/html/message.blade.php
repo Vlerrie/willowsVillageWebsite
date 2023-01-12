@@ -2,7 +2,7 @@
 {{-- Header --}}
 @slot('header')
 @component('mail::header', ['url' => env('APP_URL')])
-<img src="{{env('APP_URL')}}/img/logos/wsv_transparent.png" width="300px">
+<img src="{{env('APP_URL')}}/img/logos/wsv_trans_lean.png" width="300px">
 
 @endcomponent
 @endslot

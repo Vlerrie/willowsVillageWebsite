@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Willows Village') }} - @yield('title')</title>
+    @yield('metaDescription')
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 {{--    <noscript><link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"></noscript>--}}

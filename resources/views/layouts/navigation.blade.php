@@ -10,20 +10,6 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                {{--                <li class="nav-item dropdown">--}}
-                {{--                    <a class="nav-link dropdown-toggle" id="wsvNav" href="" data-bs-toggle="dropdown"--}}
-                {{--                       aria-expanded="false">--}}
-                {{--                        Willows Security Village--}}
-                {{--                    </a>--}}
-                {{--                    <ul class="dropdown-menu dropdown-menu-start">--}}
-                {{--                        @auth()--}}
-                {{--                            <li><a class="dropdown-item" href="/#newsDiv">Latest News And Updates</a></li>--}}
-                {{--                        @endif--}}
-                {{--                        <li><a class="dropdown-item" href="/#willowsSecurityDiv">About Willows Security Village</a></li>--}}
-                {{--                        <li><a class="dropdown-item" href="/#benefitsDiv">Benefits</a></li>--}}
-                {{--                        <li><a class="dropdown-item" href="/#closureDiv">Closure Process</a></li>--}}
-                {{--                    </ul>--}}
-                {{--                </li>--}}
 
                 <li class="nav-item">
                     <a class="nav-link" id="" aria-current="page" href="/">
@@ -42,7 +28,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="otherNav" href="" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" id="otherNav" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Other
                     </a>

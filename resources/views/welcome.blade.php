@@ -4,6 +4,10 @@
     Home
 @endsection
 
+@section('metaDescription')
+    <meta name="description" content="Make the Willows a safer area by closing the community">
+@endsection
+
 @section('content')
     @auth()
         <div class="container-fluid col-12 px-4 py-3 bg-light bg-opacity-50 shadow-lg">

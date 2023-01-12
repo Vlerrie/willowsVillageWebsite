@@ -4,6 +4,10 @@
     Important Contacts
 @endsection
 
+@section('metaDescription')
+    <meta name="description" content="Need to know contact information for municipal services, electrical faults or medical services.">
+@endsection
+
 @section('content')
     <div class="container-fluid min-vh-100">
         <div class="row justify-content-center my-5">
