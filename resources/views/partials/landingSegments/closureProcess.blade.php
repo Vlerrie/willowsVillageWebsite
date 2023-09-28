@@ -57,7 +57,6 @@
     </div>
     <div class="col-lg-6 col-md-6 pe-lg-5 align-self-start">
         <h1 class="display-4 fw-bold lh-1 my-3">Closure Map</h1>
-{{--        <iframe title="Willows Village" src="https://www.google.com/maps/d/u/0/embed?mid=1kDlnGRkEU6AaNCGu4BKL0Zem3qZSwdw&ehbc=2E312F" loading="lazy" width="100%" style="height: 75vh"></iframe>--}}
         <iframe title="Willows Village" src="https://www.google.com/maps/d/u/0/embed?mid=1K2LEYUBv7pdVAZZCkc9xsbM7YVZaMtw&ehbc=2E312F&noprof=1" loading="lazy" width="100%" style="height: 75vh"></iframe>
     </div>
 </div>

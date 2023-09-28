@@ -42,6 +42,12 @@
             </ul>
 
             <ul class="navbar-nav mb-2 mb-md-0">
+
+                <li class="nav-item me-5">
+                    <a href="https://chat.whatsapp.com/IYjv5ZEyk7K30ssMQDaIUW" class="d-block link-dark text-decoration-none">
+                        <img src="/img/logos/whatsapp.png" alt="mdo" width="40" height="40" class="rounded-circle">
+                    </a>
+                </li>
                 @auth()
                     @if(Auth::user()->admin)
                         <li class="nav-item">

@@ -23,16 +23,10 @@
             <p class="fs-3">
                 Receive updates on the progress of the area closure as it progresses.
             </p>
-            {{--        The following benefits are most likely to be achieved by the proposed scheme:--}}
-            {{--        <ul class="fs-4">--}}
-            {{--            <li>A significant reduction in crime rates</li>--}}
-            {{--            <li>A 10% increase in property values within the scheme</li>--}}
-            {{--            <li>Security, which includes alarm monitoring and armed reaction, at an affordable monthly subscription</li>--}}
-            {{--            <li>Significant savings on insurance premiums</li>--}}
-            {{--            <li>Safer streets for our children and ourselves</li>--}}
-            {{--            <li>Safer living and peace of mind</li>--}}
-            {{--        </ul>--}}
         @endguest
+
+
+
     </div>
     <div class="col-md-10 mx-auto col-lg-5 px-lg-5 align-items-top">
         @auth()
