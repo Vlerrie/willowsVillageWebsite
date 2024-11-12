@@ -3,12 +3,12 @@
         <a class="navbar-brand" href="/" style="max-width: 180px">
             @include('layouts.logo')
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
-                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample04">
+        <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
                 <li class="nav-item">
@@ -17,12 +17,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="" aria-current="page" href="/#benefitsDiv">
+                    <a class="nav-link" onclick="closeMenu()" aria-current="page" href="/#benefitsDiv">
                         Benefits
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="" aria-current="page" href="/#closureDiv">
+                    <a class="nav-link" onclick="closeMenu()" aria-current="page" href="/#closureDiv">
                         Closure Process
                     </a>
                 </li>
@@ -94,3 +94,9 @@
         </div>
     </div>
 </nav>
+
+<script>
+    function closeMenu(){
+        document.getElementById('mainMenu').classList.remove("show");
+    }
+</script>
