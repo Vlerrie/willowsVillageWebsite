@@ -10,10 +10,9 @@ class faqController extends Controller
     public function index()
     {
         return view('pages.faq', [
-            'faq' => faq::inRandomOrder()->take(5)->get()
+            'faq' => faq::inRandomOrder()->get()
         ]);
     }
-
 
     public function searchTerm($searchTerm)
     {

@@ -12,6 +12,7 @@ use Spatie\IcalendarGenerator\Enums\Display;
 use Spatie\IcalendarGenerator\Enums\EventStatus;
 use Spatie\IcalendarGenerator\Enums\ParticipationStatus;
 use Spatie\IcalendarGenerator\Properties\AppleLocationCoordinatesProperty;
+use Spatie\IcalendarGenerator\Properties\BinaryProperty;
 use Spatie\IcalendarGenerator\Properties\CalendarAddressProperty;
 use Spatie\IcalendarGenerator\Properties\CoordinatesProperty;
 use Spatie\IcalendarGenerator\Properties\DateTimeProperty;
@@ -21,6 +22,7 @@ use Spatie\IcalendarGenerator\Properties\TextProperty;
 use Spatie\IcalendarGenerator\Properties\UriProperty;
 use Spatie\IcalendarGenerator\Timezones\HasTimezones;
 use Spatie\IcalendarGenerator\Timezones\TimezoneRangeCollection;
+use Spatie\IcalendarGenerator\ValueObjects\BinaryValue;
 use Spatie\IcalendarGenerator\ValueObjects\CalendarAddress;
 use Spatie\IcalendarGenerator\ValueObjects\DateTimeValue;
 use Spatie\IcalendarGenerator\ValueObjects\RRule;
@@ -68,7 +70,12 @@ class Event extends Component implements HasTimezones
 
     private ?EventStatus $status = null;
 
-    private ?RRule $rrule = null;
+    /** @var RRule|string|null */
+    private $rrule = null;
+
+    private ?DateTimeInterface $rruleStarting = null;
+
+    private ?DateTimeInterface $rruleUntil = null;
 
     /** @var \Spatie\IcalendarGenerator\ValueObjects\DateTimeValue[] */
     private array $recurrence_dates = [];
@@ -78,7 +85,7 @@ class Event extends Component implements HasTimezones
 
     private ?string $url = null;
 
-    /** @var array[] */
+    /** @var array<array|BinaryValue> */
     private array $attachments = [];
 
     /** @var array[] */
@@ -120,7 +127,14 @@ class Event extends Component implements HasTimezones
 
     public function endsAt(DateTimeInterface $ends, bool $withTime = true): Event
     {
-        $this->ends = DateTimeValue::create($ends, $withTime);
+        if ($this->isFullDay) {
+            // The DTEND is the non-inclusive end of the event.
+            $ends = $ends->modify('+1 day');
+            $this->ends = DateTimeValue::create($ends, false);
+        } else {
+            $this->ends = DateTimeValue::create($ends, $withTime);
+        }
+
 
         return $this;
     }
@@ -293,6 +307,15 @@ class Event extends Component implements HasTimezones
         return $this;
     }
 
+    public function rruleAsString(string $rrule, ?DateTimeInterface $starting = null, DateTimeInterface $until = null): Event
+    {
+        $this->rrule = $rrule;
+        $this->rruleStarting = $starting;
+        $this->rruleUntil = $until;
+
+        return $this;
+    }
+
     /**
      * @param DateTimeInterface[]|DateTimeInterface $dates
      * @param bool $withTime
@@ -346,6 +369,16 @@ class Event extends Component implements HasTimezones
         return $this;
     }
 
+    public function embeddedAttachment(
+        string $data,
+        ?string $mediaType = null,
+        bool $needsEncoding = true
+    ): Event {
+        $this->attachments[] = new BinaryValue($data, $mediaType, $needsEncoding);
+
+        return $this;
+    }
+
     public function image(string $url, ?string $mime = null, ?Display $display = null): Event
     {
         $this->images[] = [
@@ -367,7 +400,11 @@ class Event extends Component implements HasTimezones
             ->add($this->starts)
             ->add($this->ends)
             ->add($this->created)
-            ->add($this->rrule)
+            ->add(
+                is_string($this->rrule)
+                ? [$this->rruleStarting, $this->rruleUntil]
+                : $this->rrule
+            )
             ->add($this->recurrence_dates)
             ->add($this->excluded_recurrence_dates);
     }
@@ -424,12 +461,18 @@ class Event extends Component implements HasTimezones
                 fn () => TextProperty::create('TRANSP', 'TRANSPARENT')
             )
             ->optional(
+                $this->isFullDay,
+                fn () => TextProperty::create('X-MICROSOFT-CDO-ALLDAYEVENT', 'TRUE')
+            )
+            ->optional(
                 $this->organizer,
                 fn () => CalendarAddressProperty::create('ORGANIZER', $this->organizer)
             )
             ->optional(
                 $this->rrule,
-                fn () => RRuleProperty::create('RRULE', $this->rrule)
+                fn () => is_string($this->rrule)
+                    ? TextProperty::create('RRULE', $this->rrule)->withoutEscaping()
+                    : RRuleProperty::create('RRULE', $this->rrule)
             )
             ->multiple(
                 $this->attendees,
@@ -449,9 +492,15 @@ class Event extends Component implements HasTimezones
             )
             ->multiple(
                 $this->attachments,
-                fn (array $attachment) => $attachment['type'] !== null
-                    ? UriProperty::create('ATTACH', $attachment['url'])->addParameter(Parameter::create('FMTTYPE', $attachment['type']))
-                    : UriProperty::create('ATTACH', $attachment['url'])
+                function ($attachment) {
+                    if ($attachment instanceof BinaryValue) {
+                        return BinaryProperty::create('ATTACH', $attachment);
+                    }
+
+                    return $attachment['type'] !== null
+                        ? UriProperty::create('ATTACH', $attachment['url'])->addParameter(Parameter::create('FMTTYPE', $attachment['type']))
+                        : UriProperty::create('ATTACH', $attachment['url']);
+                }
             )
             ->multiple(
                 $this->images,

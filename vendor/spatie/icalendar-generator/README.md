@@ -1,12 +1,9 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # Generate calendars in the iCalendar format
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/icalendar-generator.svg?style=flat-square)](https://packagist.org/packages/spatie/icalendar-generator)
-[![Build Status](https://img.shields.io/github/workflow/status/spatie/icalendar-generator/Test?label=Tests)](https://github.com/spatie/icalendar-generator/actions?query=workflow%3ATest)
-[![Style](https://img.shields.io/github/workflow/status/spatie/icalendar-generator/Check%20&%20fix%20styling?label=Style)](https://github.com/spatie/icalendar-generator/actions?query=workflow%3A%22Check+%26+fix+styling%22)
-[![Psalm](https://img.shields.io/github/workflow/status/spatie/icalendar-generator/Psalm?label=Psalm)](https://github.com/spatie/icalendar-generator/actions?query=workflow%3APsalm)
+[![Tests](https://github.com/spatie/icalendar-generator/actions/workflows/run-tests.yml/badge.svg)](https://github.com/spatie/icalendar-generator/actions/workflows/run-tests.yml)
+[![Check & fix styling](https://github.com/spatie/icalendar-generator/actions/workflows/fix-styling.yml/badge.svg)](https://github.com/spatie/icalendar-generator/actions/workflows/fix-styling.yml)
+[![Psalm](https://github.com/spatie/icalendar-generator/actions/workflows/psalm.yml/badge.svg)](https://github.com/spatie/icalendar-generator/actions/workflows/psalm.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/icalendar-generator.svg?style=flat-square)](https://packagist.org/packages/spatie/icalendar-generator)
 
 Want to create online calendars so that you can display them on an iPhone's calendar app or in Google Calendar?
@@ -222,12 +219,22 @@ Event::create()
     ...
 ```
 
-You can add an attachment as such:
+You can add a url attachment as such:
 
 ```php
 Event::create()
     ->attachment('https://spatie.be/logo.svg')
     ->attachment('https://spatie.be/feed.xml', 'application/json')
+    ...
+```
+
+You can add an embedded attachment (base64) as such:
+
+```php
+Event::create()
+    ->embeddedAttachment($file->toString())
+    ->embeddedAttachment($fileString, 'application/json')
+    ->embeddedAttachment($base64String, 'application/json', needsEncoding: false)
     ...
 ```
 
@@ -276,7 +283,7 @@ Calendar::create('Laracon Online')
 
 #### Using Carbon
 
-Since this package expects a DateTimeInterface for properties related to date and time, it is possible to use the popular [Carbon library](https://carbon.nesbot.com/):
+You can use the popular [Carbon library](https://carbon.nesbot.com/):
 
 ``` php
 use Carbon\Carbon;
@@ -371,7 +378,7 @@ Or trigger an alert on a specific date:
 ``` php
 Event::create('Laracon Online')
     ->alertAt(
-       new DateTime('05/16/2020 12:00:00'), 
+       new DateTime('05/16/2020 12:00:00'),
        'Laracon online has ended, see you next year!'
     );
 ```
@@ -517,6 +524,24 @@ Event::create('Laracon Online')
     ->doNotRepeatOn([new DateTime('05/16/2020 12:00:00'), new DateTime('08/13/2020 15:00:00')]);
 ```
 
+Alternatively you can add RRules as a string:
+
+```php
+Event::create('SymfonyCon')
+    ->rruleAsString('FREQ=DAILY;INTERVAL=1');
+```
+
+If you add RRules as a string the timezones included in DTSTART and UNTIL are unknown to the package as the string is never parsed and evaluated. If they are known you can add DTSTART and UNTIL separately to help the package discover the timezones:
+
+```php
+Event::create('SymfonyCon')
+    ->rruleAsString(
+        'DTSTART=20231207T090000Z;FREQ=DAILY;INTERVAL=1;UNTIL=20231208T090000Z',
+        new DateTime('7 december 2023 09:00:00', new DateTimeZone('UTC')),
+        new DateTime('8 december 2023 09:00:00', new DateTimeZone('UTC'))
+    );
+```
+
 
 ### Use with Laravel
 
@@ -568,7 +593,7 @@ A timezone consists of multiple entries where the time of the timezone changed r
 
 ```php
 $entry = TimezoneEntry::create(
-    TimezoneEntryType::standard(), 
+    TimezoneEntryType::standard(),
     new DateTime('16 may 2020 12:00:00'),
     '+00:00',
     '+02:00'

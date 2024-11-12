@@ -26,6 +26,16 @@
                         Closure Process
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="" aria-current="page" href="/news">
+                        News
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="" aria-current="page" href="/faq">
+                        Frequently Asked Questions
+                    </a>
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="otherNav" data-bs-toggle="dropdown"
@@ -33,7 +43,7 @@
                         Other
                     </a>
                     <ul class="dropdown-menu dropdown-menu-start">
-                        <li><a class="dropdown-item" href="/faq">Frequently Asked Questions</a></li>
+{{--                        <li><a class="dropdown-item" href="/faq">Frequently Asked Questions</a></li>--}}
                         <li><a class="dropdown-item" href="/wilgers">About Die Wilgers</a></li>
                         <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
                     </ul>
@@ -68,17 +78,16 @@
                             <li><a class="dropdown-item" href="/logout">Log Out</a></li>
 
                         </ul>
-
                     </li>
                 @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register"
-                           aria-expanded="false">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login"
-                           aria-expanded="false">Login</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="/register"--}}
+{{--                           aria-expanded="false">Register</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="/login"--}}
+{{--                           aria-expanded="false">Login</a>--}}
+{{--                    </li>--}}
 
                 @endauth
             </ul>

@@ -21,16 +21,14 @@
     "require": {
         "php": "^7.4|^8.0",
         "ext-mbstring": "*",
-        "nesbot/carbon": "^2.54",
         "spatie/enum": "^3.11"
     },
     "require-dev": {
         "ext-json": "*",
+        "nesbot/carbon": "^2.63|^3.0",
         "larapack/dd": "^1.1",
         "pestphp/pest": "^1.22",
-        "phpunit/phpunit": "^9.5",
         "spatie/pest-plugin-snapshots": "^1.1",
-        "spatie/phpunit-snapshot-assertions": "^4.2",
         "vimeo/psalm": "^4.13"
     },
     "autoload": {

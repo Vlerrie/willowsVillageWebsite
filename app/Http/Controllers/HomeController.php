@@ -16,19 +16,21 @@ class HomeController extends Controller
 {
     public function dashboard()
     {
-        $news = [];
-        $events = [];
-        if (Auth::check()) {
-            $news = new VisibleNewsItems();
-            $news = $news->getVisibleItems();
-
-            $events = new VisibleEventItems();
-            $events = $events->getVisibleItems();
-        }
+        $events = new VisibleEventItems();
+        $events = $events->getVisibleItems();
 
         return view('welcome', [
-            'news' => $news,
             'events' => $events
+        ]);
+    }
+
+    public function news()
+    {
+        $news = new VisibleNewsItems();
+        $news = $news->getVisibleItems();
+
+        return view('pages.news', [
+            'news' => $news
         ]);
     }
 }

@@ -2,6 +2,81 @@
 
 All notable changes to `icalendar-generator` will be documented in this file
 
+## 2.7.0 - 2024-05-16
+
+### What's Changed
+
+* feat: improved compatibility all day events for Microsoft products by @joostdebruijn in https://github.com/spatie/icalendar-generator/pull/132
+
+**Full Changelog**: https://github.com/spatie/icalendar-generator/compare/2.6.2...2.7.0
+
+## 2.6.2 - 2024-05-08
+
+### What's Changed
+
+* fix: dtend for full day events should be on the next day at midnight by @joostdebruijn in https://github.com/spatie/icalendar-generator/pull/128
+
+**Full Changelog**: https://github.com/spatie/icalendar-generator/compare/2.6.1...2.6.2
+
+## 2.6.1 - 2024-02-26
+
+### What's Changed
+
+* upgrade nesbot/carbon to allow sf7 by @nikow13 in https://github.com/spatie/icalendar-generator/pull/121
+
+### New Contributors
+
+* @nikow13 made their first contribution in https://github.com/spatie/icalendar-generator/pull/121
+
+**Full Changelog**: https://github.com/spatie/icalendar-generator/compare/2.6.0...2.6.1
+
+## 2.6.0 - 2024-02-14
+
+- Carbon is not mandatory, we can use php DateTime objects (#115)
+
+## 2.5.6 - 2023-03-24
+
+- Fix bugs introduced with previous pr
+
+## 2.5.5 - 2023-03-10
+
+- Allow adding rrules as string (#110)
+
+## 2.5.4 - 2023-01-25
+
+### What's Changed
+
+- Fix PHP 7.4 and test issues by @htto in https://github.com/spatie/icalendar-generator/pull/106
+
+### New Contributors
+
+- @htto made their first contribution in https://github.com/spatie/icalendar-generator/pull/106
+
+**Full Changelog**: https://github.com/spatie/icalendar-generator/compare/2.5.3...2.5.4
+
+## 2.5.3 - 2023-01-24
+
+- fix syntax error
+
+**Full Changelog**: https://github.com/spatie/icalendar-generator/compare/2.5.2...2.5.3
+
+## 2.5.2 - 2023-01-23
+
+- Add embedded attachments to Events (#104)
+
+## 2.5.1 - 2022-10-26
+
+### What's Changed
+
+- Refactor all tests to PEST by @alexmanase in https://github.com/spatie/icalendar-generator/pull/100
+- Fix GEO coordinates on locale with comma as decimal separator by @cweiske in https://github.com/spatie/icalendar-generator/pull/99
+
+### New Contributors
+
+- @alexmanase made their first contribution in https://github.com/spatie/icalendar-generator/pull/100
+
+**Full Changelog**: https://github.com/spatie/icalendar-generator/compare/2.5.0...2.5.1
+
 ## 2.5.0 - 2022-10-10
 
 ### What's Changed

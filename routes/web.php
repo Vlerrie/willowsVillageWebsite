@@ -40,6 +40,7 @@ Route::get(
     }
 );
 
+Route::get('/news', [HomeController::class, 'news']);
 Route::get('/faq', [faqController::class, 'index']);
 Route::get('/faq/search/{searchTerm}', [faqController::class, 'searchTerm']);
 
