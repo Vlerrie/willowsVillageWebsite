@@ -26,8 +26,6 @@
         </p>
 
         <hr class="col-4 my-5">
-
-
     </div>
     <div class="col-lg-6 col-md-6 pe-lg-5 align-self-start">
         <h3 class="display-5 ">Phase 2</h3>
