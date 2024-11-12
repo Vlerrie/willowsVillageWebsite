@@ -14,10 +14,9 @@
             Our vision is to establish an Independent Community Forum dedicated to enhancing and promoting the safety of
             our neighborhood and every resident.
             <br>
-            The goal is to within 24 months, assess the feasibility of implementing Closure/Boom off The Willows and
+            The goal is to within 24 months, assess the feasibility of implementing a security perimeter around the Willows area and
             execute the project if it aligns with the best interests of all residents.
         </p>
-
 
     </div>
     <div class="col-md-10 col-lg-6">
