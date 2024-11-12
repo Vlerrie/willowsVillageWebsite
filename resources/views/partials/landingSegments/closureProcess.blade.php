@@ -7,10 +7,10 @@
             <i class="fa fa-square text-secondary"></i> Decide on the model and costs
         </p>
         <p class="col-lg-10 fs-4">
-            <i class="fa fa-square text-secondary"></i> Contract Managing Agent and Streetsafe
+            <i class="fa fa-check-square text-secondary"></i> Contract Managing Agent and Streetsafe
         </p>
         <p class="col-lg-10 fs-4">
-            <i class="fa fa-square text-secondary"></i> Divide area into streets with street leaders
+            <i class="fa fa-check-square text-secondary"></i> Divide area into streets with street leaders
         </p>
         <p class="col-lg-10 fs-4">
             <i class="fa fa-square text-secondary"></i> Distribute the welcome pack documentation
