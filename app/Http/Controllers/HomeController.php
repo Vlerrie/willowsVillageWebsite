@@ -29,8 +29,12 @@ class HomeController extends Controller
         $news = new VisibleNewsItems();
         $news = $news->getVisibleItems();
 
+        $events = new VisibleEventItems();
+        $events = $events->getVisibleItems();
+
         return view('pages.news', [
-            'news' => $news
+            'news' => $news,
+            'events' => $events
         ]);
     }
 }

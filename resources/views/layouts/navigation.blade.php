@@ -28,7 +28,7 @@
                 </li>
                 <li class="nav-item px-lg-2 border-end">
                     <a class="nav-link" id="" aria-current="page" href="/news">
-                        News
+                        News & Events
                     </a>
                 </li>
                 <li class="nav-item px-lg-2 border-end">
