@@ -11,50 +11,56 @@
         <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-                <li class="nav-item">
+                <li class="nav-item pe-2 border-end">
                     <a class="nav-link" id="" aria-current="page" href="/">
                         Willows Village
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-lg-2 border-end">
                     <a class="nav-link" onclick="closeMenu()" aria-current="page" href="/#benefitsDiv">
                         Benefits
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-lg-2 border-end">
                     <a class="nav-link" onclick="closeMenu()" aria-current="page" href="/#closureDiv">
                         Closure Process
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-lg-2 border-end">
                     <a class="nav-link" id="" aria-current="page" href="/news">
                         News
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-lg-2 border-end">
                     <a class="nav-link" id="" aria-current="page" href="/faq">
                         Frequently Asked Questions
                     </a>
                 </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="otherNav" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Other
+                <li class="nav-item px-lg-2">
+                    <a class="nav-link" id="" aria-current="page" href="/importantContacts">
+                        Important Contacts
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-start">
-{{--                        <li><a class="dropdown-item" href="/faq">Frequently Asked Questions</a></li>--}}
-                        <li><a class="dropdown-item" href="/wilgers">About Die Wilgers</a></li>
-                        <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>
-                    </ul>
                 </li>
+
+                {{--                <li class="nav-item dropdown">--}}
+                {{--                    <a class="nav-link dropdown-toggle" id="otherNav" data-bs-toggle="dropdown"--}}
+                {{--                       aria-expanded="false">--}}
+                {{--                        Other--}}
+                {{--                    </a>--}}
+                {{--                    <ul class="dropdown-menu dropdown-menu-start">--}}
+                {{--                        <li><a class="dropdown-item" href="/faq">Frequently Asked Questions</a></li>--}}
+                {{--                        <li><a class="dropdown-item" href="/wilgers">About Die Wilgers</a></li>--}}
+                {{--                        <li><a class="dropdown-item" href="/importantContacts">Important Contacts</a></li>--}}
+                {{--                    </ul>--}}
+                {{--                </li>--}}
 
             </ul>
 
             <ul class="navbar-nav mb-2 mb-md-0">
 
                 <li class="nav-item me-5">
-                    <a href="https://chat.whatsapp.com/IYjv5ZEyk7K30ssMQDaIUW" class="d-block link-dark text-decoration-none">
+                    <a href="https://chat.whatsapp.com/IYjv5ZEyk7K30ssMQDaIUW"
+                       class="d-block link-dark text-decoration-none">
                         <img src="/img/logos/whatsapp.png" alt="mdo" width="40" height="40" class="rounded-circle">
                     </a>
                 </li>
@@ -80,14 +86,14 @@
                         </ul>
                     </li>
                 @else
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link" href="/register"--}}
-{{--                           aria-expanded="false">Register</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link" href="/login"--}}
-{{--                           aria-expanded="false">Login</a>--}}
-{{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="/register"--}}
+                    {{--                           aria-expanded="false">Register</a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="/login"--}}
+                    {{--                           aria-expanded="false">Login</a>--}}
+                    {{--                    </li>--}}
 
                 @endauth
             </ul>
@@ -96,7 +102,7 @@
 </nav>
 
 <script>
-    function closeMenu(){
+    function closeMenu() {
         document.getElementById('mainMenu').classList.remove("show");
     }
 </script>
